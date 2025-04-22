@@ -34,22 +34,29 @@ def threeSum(nums, target):
 
 def threeSum2(nums, target):
     nums.sort()
+    indices = []
     for i in range(0, len(nums)-2):
         j = i+1
         k = len(nums)-1
         while j < k:
             sum = nums[j] + nums[k]
             if sum == target - nums[i]:
-                return nums[i], nums[j], nums[k]
+                indices.append([nums[i], nums[j], nums[k]])
+                while j < k and nums[j] == nums[j+1]:
+                    j += 1
+                while j < k and nums[k] == nums[k-1]:
+                    k -= 1
+                j += 1
+                k -= 1
             elif sum > target - nums[i]:
                 k = k-1
             elif sum < target - nums[i]:
                 j=j+1
-        return False
+    return indices
 
 
-nums = [3,3]
-print(twoSum(nums, 12))
+nums = [-1, 0, 1, 2, -1, -4]
+print(twoSum(nums, 0))
 print(twoSum2(nums, 6))
-print(threeSum(nums, 12))
-print(threeSum2(nums, 12))
+print(threeSum(nums, 0))
+print(threeSum2(nums, 0))
