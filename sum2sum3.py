@@ -13,7 +13,9 @@ def twoSum2(nums, target):
     while i<j:
         sum = sorted_nums[i] + sorted_nums[j]
         if sum == target:
-            return sorted_nums[i], sorted_nums[j]
+            if sorted_nums[i] == sorted_nums[j]:
+                return sorted_nums[i], sorted_nums[j]
+            return nums.index(sorted_nums[i]), nums.index(sorted_nums[j])
         elif sum > target:
             j=j-1
         elif sum < target:
@@ -43,8 +45,8 @@ def threeSum2(nums, target):
         return False
 
 
-nums = [2, 7, 11, 15, 3, 10]
+nums = [3,2,4]
 print(twoSum(nums, 12))
-print(twoSum2(nums, 12))
+print(twoSum2(nums, 6))
 print(threeSum(nums, 12))
 print(threeSum2(nums, 12))
