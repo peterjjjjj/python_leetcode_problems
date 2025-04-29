@@ -2,9 +2,6 @@ def twoSum(nums, target):
     """
     O(n) is array sorted
     O(1) space complexity
-    :param nums:
-    :param target:
-    :return:
     """
     i = 0
     j = len(nums)-1
