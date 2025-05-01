@@ -11,19 +11,22 @@ def longestSubstring(string):
             current_substring.append(string[i])
             length += 1
             continue
+
         if length > substring_length:
             substrings = (string[left:right+1])
-            left = i+1
+            left = i
             current_substring = []
+            current_substring.append(string[i])
             substring_length = length
-            length = 0
+            length = 1
 
 
 
     if length > substring_length:
         substrings = (string[left:right + 1])
+        substring_length = length
 
     return substrings
 
 if __name__ == '__main__':
-    print(longestSubstring('abcdefgarjial'))
+    print(longestSubstring('aab'))
