@@ -14,7 +14,8 @@ def validParentheses(s):
                 else:
                     return False
 
-    return True
+    return True if not existing_char else False
+
 
 if __name__ == '__main__':
-    print(validParentheses("()]"))
+    print(validParentheses("("))
