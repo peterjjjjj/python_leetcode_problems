@@ -28,6 +28,7 @@ def threeSum2(nums, target):
                 j=j+1
     return indices
 
-nums = [-1,0,1,2,-1,-4]
+nums = [-1,0,1,2,-1,-4,1,-2,1,-2,4]
+print(sorted(nums))
 print(threeSum(nums, 0))
 print(threeSum2(nums, 0))
