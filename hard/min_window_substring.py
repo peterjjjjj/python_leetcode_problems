@@ -53,3 +53,4 @@ def min_window(s, t):
     require_freq = t_freq
     for char in s[left:right]:
         if char in require_freq:
+            pass
