@@ -57,6 +57,7 @@ def dijkstra(grid, start, end):
                 new_distance = value + neighbor_val
                 neighbor_row, neighbor_col = neighbor_position
                 if new_distance < distances[neighbor_row][neighbor_col]:
+                    #distances[neighbor_row][neighbor_col] should be inf
                     distances[neighbor_row][neighbor_col] = new_distance
                     pq.append(neighbor_position, new_distance)
 
