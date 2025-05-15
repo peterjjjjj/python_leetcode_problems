@@ -53,6 +53,17 @@ def min_window(s, t):
     substring_start = the start of the substring
     substring_end = the end of the substring
     num_unique_char = num of unique characters needs to be found
+
+    tc = O(n+m) m is the size of t,
+        cuz:
+        for char in t:
+        if char not in t_freq:
+            t_freq[char] = 1
+        else:
+            t_freq[char] += 1
+        interates through the t
+
+    sc = O(m), m = size of t
     """
 
 
@@ -95,7 +106,7 @@ def min_window(s, t):
                             break
                         substring[s[left]] -= 1
 
-                        left += 1
+                    left += 1
 
                 #move left back to the valid substring
                 left -= 1
@@ -105,6 +116,8 @@ def min_window(s, t):
                     min_length = right - left + 1
                     substring_start = left
                     substring_end = right
+                    #move it back to actual position
+                left += 1
 
     return s[substring_start:substring_end+1] if min_length != float('inf') else ''
 
