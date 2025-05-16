@@ -41,6 +41,40 @@ def min_window_brute(s, t):
     return min_found_substring
 
 def min_window(s, t):
+    """
+
+    :param s: string
+    :param t: target substring
+    :return:
+
+    left = pointer to left bound of the current substring
+    right = pointer to right bound of the current substring
+    min_length = the length of the minimum substring
+    substring_start = the start of the substring
+    substring_end = the end of the substring
+    num_unique_char = num of unique characters needs to be found
+
+    tc = O(n+m) m is the size of t,
+        cuz:
+        for char in t:
+        if char not in t_freq:
+            t_freq[char] = 1
+        else:
+            t_freq[char] += 1
+        interates through the t
+
+    sc = O(m), m = size of t
+    """
+
+
+    left = 0
+    right = 0
+    min_length = float('inf')
+    substring_start = 0
+    substring_end = 0
+    remaining_t = len(t)
+
+    substring = dict()
     t_freq = dict()
     for char in t:
         if char not in t_freq:
@@ -48,9 +82,44 @@ def min_window(s, t):
         else:
             t_freq[char] += 1
 
-    left = 0
-    right = 0
-    require_freq = t_freq
-    for char in s[left:right]:
-        if char in require_freq:
-            pass
+
+    for i in range(len(s)):
+        right = i
+        current_char = s[right]
+
+        if current_char in t_freq:
+            if current_char in substring:
+                substring[current_char] += 1
+            else:
+                substring[current_char] = 1
+
+            if substring[current_char] <= t_freq[current_char]:
+                remaining_t -= 1
+
+            if remaining_t == 0:
+                while True:
+                    if s[left] in t_freq:
+                        if substring[s[left]] == t_freq[s[left]]:
+                            left += 1
+                            substring[s[left - 1]] -= 1
+                            remaining_t += 1
+                            break
+                        substring[s[left]] -= 1
+
+                    left += 1
+
+                #move left back to the valid substring
+                left -= 1
+
+
+                if right - left + 1 < min_length:
+                    min_length = right - left + 1
+                    substring_start = left
+                    substring_end = right
+                    #move it back to actual position
+                left += 1
+
+    return s[substring_start:substring_end+1] if min_length != float('inf') else ''
+
+if __name__ == '__main__':
+    print(min_window('ADOBECODEBANC', 'ABC'))
