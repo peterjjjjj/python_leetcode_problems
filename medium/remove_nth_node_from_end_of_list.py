@@ -15,8 +15,18 @@ def remove_nth_from_end(head, n):
 
     target = length - 1 - n
     #iterate to the node before the target node
-    for _ in range(length):
-        head = head.next
-    head.next = head.next.next
+    current = head
+    for _ in range(target):
+        current = current.next
+    current.next = current.next.next
 
     return head
+
+if __name__ == '__main__':
+    head = LinkNode(1)
+    head.next = LinkNode(2)
+    head.next.next = LinkNode(3)
+    head.next.next.next = LinkNode(4)
+    head.next.next.next.next = LinkNode(5)
+    remove_nth_from_end(head, 2)
+    print(head.val)
