@@ -4,21 +4,19 @@ class LinkNode:
         self.next = None
 
 def remove_nth_from_end(head, n):
-    index = 0
+    length = 0
     current = head
     while current is not None:
-        index += 1
+        length += 1
         current = current.next
-    target = index - n
-    if target == 0:
+
+    if n == length:
         return head.next
 
-    index = 0
+    target = length - 1 - n
     #iterate to the node before the target node
-    while index != target - 1:
+    for _ in range(length):
         head = head.next
-        index += 1
-
     head.next = head.next.next
-    return head
 
+    return head
