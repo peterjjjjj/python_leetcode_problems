@@ -30,6 +30,13 @@ def remove_nth_from_end(head, n):
     return head
 
 def remove_nth_from_end_slow_fast(head, n):
+    """
+    time complexity: O(L(size of list) - n(index from the end))
+    space complexity: O(1)
+    :param head:
+    :param n:
+    :return:
+    """
     #set a dummy that is before the head
     dummy = LinkNode(-1000)
     dummy.next = head
