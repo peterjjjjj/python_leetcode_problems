@@ -30,6 +30,8 @@ def has_cycle_fast_slow(head):
     :param head:
     :return:
     """
+    if not head:
+        return False
     slow_pointer = head
     fast_pointer = head.next
 
