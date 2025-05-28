@@ -31,7 +31,7 @@ def remove_nth_from_end(head, n):
 
 def remove_nth_from_end_slow_fast(head, n):
     #set a dummy that is before the head
-    dummy = LinkNode(-1)
+    dummy = LinkNode(-1000)
     dummy.next = head
     #initialize slow and fast
     slow = dummy
@@ -44,13 +44,11 @@ def remove_nth_from_end_slow_fast(head, n):
         slow = slow.next
         fast = fast.next
     slow.next = slow.next.next
-    return head
+    #dummy.next is the head
+    return dummy.next
 
 if __name__ == '__main__':
     head = LinkNode(1)
     head.next = LinkNode(2)
-    head.next.next = LinkNode(3)
-    head.next.next.next = LinkNode(4)
-    head.next.next.next.next = LinkNode(5)
     remove_nth_from_end_slow_fast(head, 2)
-    print(head.val)
+    print(remove_nth_from_end_slow_fast(head, 2))
