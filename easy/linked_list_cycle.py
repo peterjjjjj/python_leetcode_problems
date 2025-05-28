@@ -5,12 +5,12 @@ class ListNode:
 
 def has_cycle(head):
     passed_nodes = set()
-    if not head:
-        return False
-    while head.next is not None:
-        if head.val not in passed_nodes:
-            passed_nodes.add(head.val)
-            head = head.next
-            continue
-        return True
+    #set current to the starting node
+    current = head
+
+    while current is not None:
+        if current in passed_nodes:
+            return True
+        passed_nodes.add(current)
+        current = current.next
     return False
