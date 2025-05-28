@@ -4,6 +4,13 @@ class LinkNode:
         self.next = None
 
 def remove_nth_from_end(head, n):
+    """
+    time complexity: O(2n)
+    space complexity: O(1)
+    :param head:
+    :param n:
+    :return:
+    """
     length = 0
     current = head
     while current is not None:
@@ -22,11 +29,28 @@ def remove_nth_from_end(head, n):
 
     return head
 
+def remove_nth_from_end_slow_fast(head, n):
+    #set a dummy that is before the head
+    dummy = LinkNode(-1)
+    dummy.next = head
+    #initialize slow and fast
+    slow = dummy
+    fast = dummy
+    #move fast to n places ahead of dummy
+    for _ in range(n):
+        fast = fast.next
+    #interate fast to the end of the list, slow now points toward the node to remove
+    while fast.next is not None:
+        slow = slow.next
+        fast = fast.next
+    slow.next = slow.next.next
+    return head
+
 if __name__ == '__main__':
     head = LinkNode(1)
     head.next = LinkNode(2)
     head.next.next = LinkNode(3)
     head.next.next.next = LinkNode(4)
     head.next.next.next.next = LinkNode(5)
-    remove_nth_from_end(head, 2)
+    remove_nth_from_end_slow_fast(head, 2)
     print(head.val)
