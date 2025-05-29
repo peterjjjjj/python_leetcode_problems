@@ -5,6 +5,12 @@ class TreeNode:
         self.right = right
 
 def diameter(root):
+    """
+    O(n)
+    O(H), height of depth
+    :param root:
+    :return:
+    """
     max_depth = 0
 
     def calculate_depth(node):
