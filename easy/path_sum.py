@@ -5,6 +5,13 @@ class TreeNode:
         self.right = right
 
 def path_sum(root: TreeNode, target: int) -> bool:
+    """
+    O(n)
+    O(H), height of the depth, worst case O(n)
+    :param root:
+    :param target:
+    :return:
+    """
     if root is None:
         return False
 
