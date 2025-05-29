@@ -5,6 +5,13 @@ class TreeNode:
         self.right = right
 
 def tree_paths(root:TreeNode) -> list[str]:
+    """
+    time complexity: O(n log n)
+    space complexity: O(n log n)
+
+    :param root:
+    :return:
+    """
     paths = []
     side_path = []
 
@@ -16,7 +23,7 @@ def tree_paths(root:TreeNode) -> list[str]:
         side_path.append(str(node.val))
 
         if node.left is None and node.right is None:
-            paths.append(str(side_path))
+            paths.append('->'.join(side_path))
 
         dfs(node.left)
         dfs(node.right)
