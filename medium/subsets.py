@@ -1,4 +1,10 @@
 def subsets_recursion(nums: list[int]) -> list[list[int]]:
+    """
+    O(N*2^N) copy takes N,
+    O(N*2^N)
+    :param nums:
+    :return:
+    """
     current_subset = []
     results = []
 
@@ -19,6 +25,12 @@ def subsets_recursion(nums: list[int]) -> list[list[int]]:
     return results
 
 def subsets_bit(nums: list[int]) -> list[list[int]]:
+    """
+    O(N*N^2)
+    O(N*N^2)
+    :param nums:
+    :return:
+    """
     n = len(nums)
     total_subsets = 1 << n
 
