@@ -1,4 +1,10 @@
 def permutations(nums: list[int]) -> list[list[int]]:
+    """
+    O(N*N!) N factorial, size of all combinations, N from the copy
+    O(N*N!)
+    :param nums:
+    :return:
+    """
     all_permutations = []
 
     if len(nums) == 1:
