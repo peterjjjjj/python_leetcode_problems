@@ -39,7 +39,7 @@ def longest_repeating_char_replacement(s, k):
             #move the left bound
             current_char[s[left]] -= 1
             left += 1
-            
+
         #if the valid string is longer than existing max
         max_freq = max(right - left + 1, max_freq)
 
