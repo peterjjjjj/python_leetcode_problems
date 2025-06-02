@@ -1,7 +1,14 @@
 def search(nums: list[int], target: int) -> int:
+    """
+    O(log n)
+    O(1)
+    :param nums:
+    :param target:
+    :return:
+    """
     left, right = 0, len(nums) - 1
 
-    while left < right:
+    while left <= right:
         mid = (left + right) // 2
         if nums[mid] == target:
             return mid
@@ -24,4 +31,4 @@ def search(nums: list[int], target: int) -> int:
 
 if __name__ == '__main__':
     test_nums = [4,5,6,7,0,1,2]
-    print(search(test_nums, 3))
+    print(search(test_nums, 0))
