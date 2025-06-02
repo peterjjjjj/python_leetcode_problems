@@ -9,16 +9,16 @@ def search(nums: list[int], target: int) -> int:
         if nums[mid] >= nums[left]:
             #the target is in the left half
             if nums[mid] >= target >= nums[left]:
-                right = mid
+                right = mid - 1
             #the target is in the right half
             else:
-                left = mid
+                left = mid + 1
         #the right half is sorted
         elif nums[mid] <= nums[right]:
-            if nums[mid] <= target <= nums[right]:
-                left = mid
+            if nums[mid] < target <= nums[right]:
+                left = mid + 1
             else:
-                right = mid
+                right = mid - 1
 
     return -1
 
