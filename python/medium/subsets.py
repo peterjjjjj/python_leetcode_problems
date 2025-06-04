@@ -47,6 +47,11 @@ def subsets_bit(nums: list[int]) -> list[list[int]]:
     return subsets
 
 def subsets2(nums: list[int]) -> list[list[int]]:
+    """
+    
+    :param nums:
+    :return:
+    """
     subsets = []
     current_subset = []
 
