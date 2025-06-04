@@ -64,7 +64,6 @@ def subsets2(nums: list[int]) -> list[list[int]]:
             current_subset.pop()
 
     dfs(0)
-
     return subsets
 
 if __name__ == '__main__':
