@@ -48,10 +48,11 @@ def subsets_bit(nums: list[int]) -> list[list[int]]:
 
 def subsets2(nums: list[int]) -> list[list[int]]:
     """
-    
+
     :param nums:
     :return:
     """
+    nums.sort()
     subsets = []
     current_subset = []
 
@@ -74,5 +75,5 @@ def subsets2(nums: list[int]) -> list[list[int]]:
 if __name__ == '__main__':
     #print(subsets_recursion([1, 2, 3]))
     #print(subsets_bit([1, 2, 3]))
-    print(subsets2([1, 2, 2]))
+    print(subsets2([4,4,4,1,4]))
 
