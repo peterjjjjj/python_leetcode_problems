@@ -1,4 +1,11 @@
 def binary_search(nums: list[int], target: int) -> int:
+    """
+    O(logN)
+    O(logN)
+    :param nums:
+    :param target:
+    :return:
+    """
 
     lower_bound = 0
     higher_bound = len(nums)-1
