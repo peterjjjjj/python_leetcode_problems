@@ -46,34 +46,9 @@ def subsets_bit(nums: list[int]) -> list[list[int]]:
 
     return subsets
 
-def subsets2(nums: list[int]) -> list[list[int]]:
-    """
 
-    :param nums:
-    :return:
-    """
-    nums.sort()
-    subsets = []
-    current_subset = []
-
-    def dfs(index: int) -> None:
-        nonlocal current_subset, subsets
-
-        subsets.append(current_subset[:])
-
-        for i in range(index, len(nums)):
-            if i > index and nums[i] == nums[i - 1]:
-                continue
-
-            current_subset.append(nums[i])
-            dfs(i + 1)
-            current_subset.pop()
-
-    dfs(0)
-    return subsets
 
 if __name__ == '__main__':
-    #print(subsets_recursion([1, 2, 3]))
-    #print(subsets_bit([1, 2, 3]))
-    print(subsets2([4,4,4,1,4]))
+    print(subsets_recursion([1, 2, 3]))
+    print(subsets_bit([1, 2, 3]))
 
