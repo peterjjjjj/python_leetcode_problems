@@ -10,14 +10,24 @@ def guess(num: int) -> int:
         return 0
 
 def binary_search(n: int) -> int:
-    guess_num = n // 2
-    while guess(guess_num) != 0:
-        if guess(guess_num) == -1:
-            guess_num = (0 + guess_num) // 2
-        if guess(guess_num) == 1:
-            guess_num = (guess_num + n) // 2
+    low_bound = 1
+    high_bound = n
 
-    return guess_num
+    while low_bound <= high_bound:
+        mid = (low_bound + high_bound) // 2
+
+        result = guess(mid)
+
+        if result == 0:
+            return mid
+
+        elif result == 1:
+            low_bound = mid + 1
+
+        elif result == -1:
+            high_bound = mid - 1
+
+
 
 if __name__ == "__main__":
     print(binary_search(10))
