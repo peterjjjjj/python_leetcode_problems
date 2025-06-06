@@ -5,19 +5,19 @@ def find_min(nums: list[int]) -> int:
     def search(nums:list[int]) -> int:
         nonlocal low_bound, high_bound
 
+        if low_bound == high_bound:
+            return nums[low_bound]
+
         #mid num of the array
         mid_index = (low_bound + high_bound) // 2
 
-        while low_bound < high_bound:
             #if mid num smaller than left bound, smaller array on the right
-            if nums[mid_index] > nums[high_bound]:
-                low_bound = mid_index + 1
-                return search(nums)
-            else:
-                high_bound = mid_index
-                return search(nums)
-
-        return nums[mid_index]
+        if nums[mid_index] > nums[high_bound]:
+            low_bound = mid_index + 1
+            return search(nums)
+        else:
+            high_bound = mid_index
+            return search(nums)
 
     return search(nums)
 if __name__ == '__main__':
