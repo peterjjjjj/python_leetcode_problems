@@ -1,12 +1,24 @@
 def find_min(nums: list[int]) -> int:
-    if len(nums) == 1:
-        return nums[0]
+    low_bound = 0
+    high_bound = len(nums) - 1
 
-    if nums[0] > nums[-1]:
-        return find_min(nums[len(nums)//2:])
+    def search(nums:list[int]) -> int:
+        nonlocal low_bound, high_bound
 
-    else:
-        return find_min(nums[:len(nums)//2])
+        #mid num of the array
+        mid_index = (low_bound + high_bound) // 2
 
+        while low_bound < high_bound:
+            #if mid num smaller than left bound, smaller array on the right
+            if nums[mid_index] > nums[high_bound]:
+                low_bound = mid_index + 1
+                search(nums)
+            else:
+                high_bound = mid_index
+                search(nums)
+
+        return nums[mid_index]
+
+    return search(nums)
 if __name__ == '__main__':
-    print(find_min([3,4,5,1,2]))
+    print(find_min([4,5,6,7,0,1,2]))
