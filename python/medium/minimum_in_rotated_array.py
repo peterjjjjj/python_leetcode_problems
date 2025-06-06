@@ -12,10 +12,10 @@ def find_min(nums: list[int]) -> int:
             #if mid num smaller than left bound, smaller array on the right
             if nums[mid_index] > nums[high_bound]:
                 low_bound = mid_index + 1
-                search(nums)
+                return search(nums)
             else:
                 high_bound = mid_index
-                search(nums)
+                return search(nums)
 
         return nums[mid_index]
 
