@@ -1,5 +1,13 @@
 from collections import deque
 
+"""
+O(n)
+O(n)
+
+O(n)
+O(H) H is the max depth
+"""
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
