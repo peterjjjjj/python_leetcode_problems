@@ -8,6 +8,9 @@ def is_same_tree(p: TreeNode, q: TreeNode) -> bool:
     if not p and not q:
         return True
 
+    if not p or not q:
+        return False
+
     if p.val != q.val:
         return False
 
@@ -18,6 +21,6 @@ if __name__ == '__main__':
     test.left = TreeNode(2)
     test.right = TreeNode(3)
     test2 = TreeNode(1)
-    test2.left = TreeNode(2)
+    test2.left = TreeNode(None)
     test2.right = TreeNode(3)
     print(is_same_tree(test, test2))
