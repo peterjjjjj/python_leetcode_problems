@@ -22,4 +22,4 @@ def permutations(nums: list[int]) -> list[list[int]]:
     return all_permutations
 
 if __name__ == '__main__':
-    print(permutations([1, 2, 3]))
+    print(permutations([1, 2, 3, 7, 9 ,10]))
