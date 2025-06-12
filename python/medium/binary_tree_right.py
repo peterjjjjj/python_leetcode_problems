@@ -6,7 +6,7 @@ class TreeNode:
         self.left = left
         self.right = right
 
-def right_side_view(root: TreeNode) -> list[int]:
+def right_side_view_bfs(root: TreeNode) -> list[int]:
     numbers = []
     if not root:
         return numbers
@@ -33,4 +33,4 @@ if __name__ == '__main__':
     test.right = TreeNode(3)
     test.left.left = TreeNode(5)
     test.right.right = TreeNode(4)
-    print(right_side_view(test))
+    print(right_side_view_bfs(test))
