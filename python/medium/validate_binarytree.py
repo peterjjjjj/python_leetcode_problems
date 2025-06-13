@@ -14,7 +14,12 @@ def is_valid_BST(root: TreeNode) -> bool:
         if node.left and node.right:
             if not node.left.val < node.val < node.right.val:
                 return False
-
+        elif node.left:
+            if not node.left.val < node.val:
+                return False
+        elif node.right:
+            if not node.right.val > node.val:
+                return False
 
         left = dfs(node.left)
         right = dfs(node.right)
