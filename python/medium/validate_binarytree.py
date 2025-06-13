@@ -6,29 +6,21 @@ class TreeNode:
 
 def is_valid_BST(root: TreeNode) -> bool:
 
-    def dfs(node: TreeNode) -> bool:
+    def dfs(node: TreeNode, left_bound = -float('INF'), right_bound = float('INF')) -> bool:
 
         if not node:
             return True
 
-        if node.left and node.right:
-            if not node.left.val < node.val < node.right.val:
-                return False
-        elif node.left:
-            if not node.left.val < node.val:
-                return False
-        elif node.right:
-            if not node.right.val > node.val:
-                return False
+        if node.val < left_bound or node.val > right_bound:
+            return False
 
-        left = dfs(node.left)
-        right = dfs(node.right)
+        left = dfs(node.left, left_bound, node.val)
+        right = dfs(node.right, node.val, right_bound)
 
-        if right and left:
-            return True
-
+        return left and right
 
     return dfs(root)
+
 
 if __name__ == '__main__':
     test = TreeNode(2)
