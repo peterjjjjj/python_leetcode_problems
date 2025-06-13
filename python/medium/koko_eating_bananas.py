@@ -1,7 +1,7 @@
 def min_eating_speed(piles: list[int], h: int) -> int:
 
     sorted_piles = sorted(piles)
-    min_bound = 0
+    min_bound = 1
     max_bound = sorted_piles[-1]
 
     def can_eat_all(speed) -> bool:
@@ -22,15 +22,12 @@ def min_eating_speed(piles: list[int], h: int) -> int:
     while min_bound <= max_bound:
         mid = (min_bound + max_bound) // 2
         if can_eat_all(mid):
-            if not can_eat_all(mid - 1):
-                return mid
-            else:
-                max_bound = mid - 1
+            ans = mid
+            max_bound = mid - 1
         else:
-            if can_eat_all(mid + 1):
-                return mid + 1
-            else:
-                min_bound = mid + 1
+            min_bound = mid + 1
+
+    return ans
 
 if __name__ == '__main__':
     piles = [312884470]
