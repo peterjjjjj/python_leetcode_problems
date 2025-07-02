@@ -3,9 +3,15 @@ def find_median_sorted_arrays(
         num2: list[int]) -> float:
 
     if not num1:
-        return num2[len(num2) //2]
+        if len(num2) % 2 == 0:
+            return (num2[len(num2) //2] + num2[len(num2) //2 - 1]) / 2
+        else:
+            return num2[len(num2) //2]
     if not num2:
-        return num1[len(num1) //2]
+        if len(num1) % 2 == 0:
+            return (num1[len(num1) //2] + num1[len(num1) //2 - 1]) / 2
+        else:
+            return num1[len(num1) //2]
 
     #swap the 2 arrays to make sure num1 is always the shortest
     if len(num2) <= len(num1):
@@ -50,7 +56,7 @@ def find_median_sorted_arrays(
             else:
                 return max(num_short[partition_short], num_long[partition_long])
 
-        low_boundary = (partition_short + high_boundary + 1) // 2
+        low_boundary = (partition_short + high_boundary) // 2 + 1
 
 
     if (len(num_short) + len(num_long)) % 2 == 0:
