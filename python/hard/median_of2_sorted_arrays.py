@@ -1,6 +1,10 @@
 def find_median_sorted_arrays(
         num1: list[int],
         num2: list[int]) -> float:
+    if not num1:
+        return num2[len(num2) //2]
+    if not num2:
+        return num1[len(num1) //2]
 
     #swap the 2 arrays to make sure num1 is always the shortest
     if len(num2) <= len(num1):
@@ -43,7 +47,7 @@ def find_median_sorted_arrays(
             if (len(num_short) + len(num_long)) % 2 == 0:
                 return min(num_short[partition_short], num_long[partition_long]) + max(short_left_max, long_left_max) / 2
             else:
-                return min(num_short[partition_short], num_long[partition_long])
+                return max(num_short[partition_short], num_long[partition_long])
 
         low_boundary = partition_short + high_boundary + 1 // 2
 
@@ -51,9 +55,9 @@ def find_median_sorted_arrays(
     if (len(num_short) + len(num_long)) % 2 == 0:
         return min(num_short[partition_short], num_long[partition_long]) + max(short_left_max, long_left_max) / 2
     else:
-        return min(num_short[partition_short], num_long[partition_long])
+        return max(num_short[partition_short], num_long[partition_long])
 
 if __name__ == '__main__':
-    num1 = [0,3,4,5]
-    num2 = [1,2]
+    num1 = []
+    num2 = [1]
     print(find_median_sorted_arrays(num1, num2))
