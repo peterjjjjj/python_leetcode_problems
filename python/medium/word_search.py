@@ -9,40 +9,38 @@ def exist(board: list[list[str]],
     """
     board_rows = len(board)
     board_cols = len(board[0])
+    word_len = len(word)
 
-    def dfs(coordinates: tuple[int, int], target_char_index: int) -> bool:
-        if target_char_index >= len(word):
+    def dfs(r: int, c: int, target_char_index: int) -> bool:
+        #if have found all target chars
+        if target_char_index >= word_len:
             return True
 
-        if not board[coordinates[0]][coordinates[1]] == word[target_char_index]:
+        #if row_index and column_index are out of range
+        if not (0 <= r < board_rows and 0 <= c < board_cols):
             return False
 
-        #check the char under
-        if coordinates[0] < board_rows - 1:
-            new_coordinates = (coordinates[0] + 1, coordinates[1])
-            return dfs(new_coordinates, target_char_index + 1)
+        #if current char doesn't match
+        if board[r][c] != word[target_char_index]:
+            return False
 
-        #check the char above
-        if coordinates[0] > 0:
-            new_coordinates = (coordinates[0] - 1, coordinates[1])
-            return dfs(new_coordinates, target_char_index + 1)
+        #mark the visited char
+        board[r][c] = '!'
 
-        #check the char at the right
-        if coordinates[1] < board_cols - 1:
-            new_coordinates = (coordinates[0], coordinates[1] + 1)
-            return dfs(new_coordinates, target_char_index + 1)
+        result = (
+            dfs(r + 1, c, target_char_index) or
+            dfs(r - 1, c, target_char_index) or
+            dfs(r, c + 1, target_char_index) or
+            dfs(r, c - 1, target_char_index)
+        )
 
-        #check the char at the left
-        if coordinates[1] > 0:
-            new_coordinates = (coordinates[0], coordinates[1] - 1)
-            return dfs(new_coordinates, target_char_index + 1)
+        return result
 
-    for i in range(len(board)):
-        for j in range(len(board[0])):
-            if board[i][j] == word[0]:
-                return dfs((i, j), 0)
+
+
+
 
 if __name__ == '__main__':
-    board = [['A', 'B', 'C', 'E'], ['F', 'F', 'F', 'F'], ['G', 'G', 'G', 'G']]
-    target_word = 'AFG'
-    print(exist(board, target_word))
+    board1 = [['A', 'B', 'C', 'E'], ['S', 'F', 'C', 'S'], ['A', 'D', 'E', 'E']]
+    target_word = 'ABCCED'
+    print(exist(board1, target_word))
