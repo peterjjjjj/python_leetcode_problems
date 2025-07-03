@@ -28,16 +28,21 @@ def exist(board: list[list[str]],
         board[r][c] = '!'
 
         result = (
-            dfs(r + 1, c, target_char_index) or
-            dfs(r - 1, c, target_char_index) or
-            dfs(r, c + 1, target_char_index) or
-            dfs(r, c - 1, target_char_index)
+            dfs(r + 1, c, target_char_index + 1) or
+            dfs(r - 1, c, target_char_index + 1) or
+            dfs(r, c + 1, target_char_index + 1) or
+            dfs(r, c - 1, target_char_index + 1)
         )
 
         return result
 
+    for i in range(board_rows):
+        for j in range(board_cols):
+            if board[i][j] == word[0]:
+                if dfs(i, j, 0):
+                    return True
 
-
+    return False
 
 
 if __name__ == '__main__':
