@@ -11,7 +11,7 @@ def combination_sum(
     :param target: integer
     :return: list of combinations of candidates that sum to target
     """
-
+    candidates.sort()
     combinations = []
 
     def dfs(current_index, remaining_target: int, current_combination = []) -> None:
@@ -37,4 +37,4 @@ def combination_sum(
     return combinations
 
 if __name__ == '__main__':
-    print(combination_sum([2,3], 6))
+    print(combination_sum([8,7,4,3], 11))
