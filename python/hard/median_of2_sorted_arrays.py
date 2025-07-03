@@ -50,7 +50,7 @@ def find_median_sorted_arrays(
         else:
             long_right_min = num_long[partition_long]
 
-        if short_left_max < long_right_min and long_left_max < short_right_min:
+        if short_left_max <= long_right_min and long_left_max <= short_right_min:
             if (len(num_short) + len(num_long)) % 2 == 0:
                 return (max(short_left_max, long_left_max) + min(short_right_min, long_right_min)) / 2
             else:
@@ -59,7 +59,7 @@ def find_median_sorted_arrays(
         if short_right_min < long_left_max:
             low_boundary = partition_short + 1
         if long_right_min < short_left_max:
-            high_boundary = partition_long - 1
+            high_boundary = partition_short - 1
 
     partition_long = total_numbers_on_left - len(num_short)
     if (len(num_short) + len(num_long)) % 2 == 0:
@@ -70,6 +70,6 @@ def find_median_sorted_arrays(
 if __name__ == '__main__':
     #num1 = [1,2,3,4,5]
     #num2 = [6,7,8,9,10,11,12,13,14,15,16,17]
-    num1 = [1,2]
-    num2 = [3,4]
+    num1 = [5,6]
+    num2 = [1,2,3,4,7]
     print(find_median_sorted_arrays(num1, num2))
