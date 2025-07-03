@@ -26,7 +26,7 @@ def find_median_sorted_arrays(
     low_boundary = 0
     high_boundary = len(num_short)
 
-    while low_boundary < high_boundary:
+    while low_boundary <= high_boundary:
         partition_short = (low_boundary + high_boundary) // 2
         partition_long = total_numbers_on_left - partition_short
 
@@ -69,6 +69,6 @@ def find_median_sorted_arrays(
 if __name__ == '__main__':
     #num1 = [1,2,3,4,5]
     #num2 = [6,7,8,9,10,11,12,13,14,15,16,17]
-    num1 = [3]
-    num2 = [-2,-1]
+    num1 = [1,3]
+    num2 = [2]
     print(find_median_sorted_arrays(num1, num2))
