@@ -24,6 +24,7 @@ def exist(board: list[list[str]],
         if board[r][c] != word[target_char_index]:
             return False
 
+        original_char = board[r][c]
         #mark the visited char
         board[r][c] = '!'
 
@@ -33,6 +34,8 @@ def exist(board: list[list[str]],
             dfs(r, c + 1, target_char_index + 1) or
             dfs(r, c - 1, target_char_index + 1)
         )
+
+        board[r][c] = original_char
 
         return result
 
