@@ -11,54 +11,29 @@ def recover_binary_search_tree(root: TreeNode) -> None:
     :param root: Tree to be correct.
     :return: None
     """
-    if not root:
-        return
 
-    current_node_value = root.val
-
-    def in_order_traversal_left(node: TreeNode) -> None:
-        nonlocal root
+    def in_order_traversal(node: TreeNode, previous_node = None) -> None:
         if node is None:
             return
 
-        in_order_traversal_left(node.left)
+        in_order_traversal(node.left, previous_node)
 
-        if node.val == current_node_value:
-            return
+        if previous_node is None:
+            previous_node = node
 
-        if current_node_value < node.val:
-            root.val, node.val = node.val, root.val
-            return
+        elif previous_node.val > node.val:
+            previous_node.val, node.val = node.val, previous_node.val
 
-        in_order_traversal_left(node.right)
+        in_order_traversal(node.right, previous_node)
 
-    def in_order_traversal_right(node: TreeNode) -> None:
-        nonlocal root
-        if node is None:
-            return
-
-        in_order_traversal_right(node.right)
-
-        if node.val == current_node_value:
-            return
-
-        if current_node_value > node.val:
-            root.val, node.val = node.val, root.val
-            return
-
-        in_order_traversal_right(node.left)
-
-    in_order_traversal_left(root)
-    in_order_traversal_right(root)
-
-
+    in_order_traversal(root)
 
 
 if __name__ == '__main__':
-    test_root = TreeNode(1)
-    test_root.left = TreeNode(2)
-    test_root.right = TreeNode(3)
-    result = recover_binary_search_tree(test_root)
-    print(result)
+    test_root = TreeNode(2)
+    test_root.left = TreeNode(3)
+    test_root.right = TreeNode(1)
+    recover_binary_search_tree(test_root)
+    print()
 
 
