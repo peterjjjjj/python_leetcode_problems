@@ -12,27 +12,43 @@ def recover_binary_search_tree(root: TreeNode) -> None:
     :return: None
     """
 
-    def in_order_traversal(node: TreeNode, previous_node = None) -> None:
+    #use outer declaration to ensure that the previous_node won't reset during recursion
+    previous_node = None
+    first_error_node = None
+    second_error_node = None
+
+    def in_order_traversal(node: TreeNode) -> None:
+        nonlocal previous_node, first_error_node, second_error_node
         if node is None:
             return
 
-        in_order_traversal(node.left, previous_node)
+        in_order_traversal(node.left)
 
-        if previous_node is None:
-            previous_node = node
+        #because we are eventually swapping the first_error_node with the second_error_node,
+        #if there is only 1 misplaced node, swap with it's next node
+        #is there is a second node, instead of swapping the node next to the first node, swap with second
 
-        elif previous_node.val > node.val:
-            previous_node.val, node.val = node.val, previous_node.val
+        #if we found a misplaced node
+        if previous_node is not None and previous_node.val > node.val:
+            #and it's the first node found
+            if first_error_node is None:
+                first_error_node = previous_node
 
-        in_order_traversal(node.right, previous_node)
+            second_error_node = node
+
+        previous_node = node
+
+        in_order_traversal(node.right)
 
     in_order_traversal(root)
 
+    first_error_node.val, second_error_node.val = second_error_node.val, first_error_node.val
+
 
 if __name__ == '__main__':
-    test_root = TreeNode(2)
+    test_root = TreeNode(1)
     test_root.left = TreeNode(3)
-    test_root.right = TreeNode(1)
+    test_root.right = TreeNode(2)
     recover_binary_search_tree(test_root)
     print()
 
