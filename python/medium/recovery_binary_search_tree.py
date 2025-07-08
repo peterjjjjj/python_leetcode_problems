@@ -7,6 +7,8 @@ class TreeNode(object):
 def recover_binary_search_tree(root: TreeNode) -> None:
     """
     Correct the given tree by swapping the 2 nodes that were in the wrong places.
+    Time Complexity: O(N)
+    Space Complexity: O(N)
 
     :param root: Tree to be correct.
     :return: None
