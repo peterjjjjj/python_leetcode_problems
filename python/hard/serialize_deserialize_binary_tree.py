@@ -47,7 +47,7 @@ def deserialize(data: str) -> TreeNode:
     """
 
     if not data:
-        return TreeNode(None)
+        return None
 
     treepath_list = data.split(',')
 
