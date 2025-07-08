@@ -11,26 +11,48 @@ def recover_binary_search_tree(root: TreeNode) -> None:
     :param root: Tree to be correct.
     :return: None
     """
+    if not root:
+        return
 
-    def bst(node: TreeNode) -> TreeNode:
-        if not node:
-            return None
+    current_node_value = root.val
 
-        if node.left:
-            if node.val < node.left.val:
-                node.val, node.left.val = node.left.val, node.val
+    def in_order_traversal_left(node: TreeNode) -> None:
+        nonlocal root
+        if node is None:
+            return
+
+        in_order_traversal_left(node.left)
+
+        if node.val == current_node_value:
+            return
+
+        if current_node_value < node.val:
+            root.val, node.val = node.val, root.val
+            return
+
+        in_order_traversal_left(node.right)
+
+    def in_order_traversal_right(node: TreeNode) -> None:
+        nonlocal root
+        if node is None:
+            return
+
+        in_order_traversal_right(node.right)
+
+        if node.val == current_node_value:
+            return
+
+        if current_node_value > node.val:
+            root.val, node.val = node.val, root.val
+            return
+
+        in_order_traversal_right(node.left)
+
+    in_order_traversal_left(root)
+    in_order_traversal_right(root)
 
 
-        if node.right:
-            if node.val > node.right.val:
-                node.val, node.right.val = node.right.val, node.val
 
-        bst(node.left)
-        bst(node.right)
-
-        return node
-
-    bst(root)
 
 if __name__ == '__main__':
     test_root = TreeNode(1)
