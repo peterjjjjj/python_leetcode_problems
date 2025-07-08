@@ -14,7 +14,7 @@ def recover_binary_search_tree(root: TreeNode) -> None:
     :return: None
     """
 
-    #use outer declaration to ensure that the previous_node won't reset during recursion
+    #these variables are declared outside to maintain state across recursive calls
     previous_node = None
     first_error_node = None
     second_error_node = None
@@ -26,7 +26,7 @@ def recover_binary_search_tree(root: TreeNode) -> None:
 
         in_order_traversal(node.left)
 
-        #because we are eventually swapping the first_error_node with the second_error_node,
+        #identify the first misplaced node based on the previous node
         #if there is only 1 misplaced node, swap with it's next node
         #is there is a second node, instead of swapping the node next to the first node, swap with second
 
