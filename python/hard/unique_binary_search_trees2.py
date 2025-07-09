@@ -25,12 +25,12 @@ def generate_trees(n: int) -> list[TreeNode]:
             return [TreeNode(start)]
 
         for i in range(start, end+1):
-            root = TreeNode(i)
             left_sub_trees = dfs(start, i - 1)
             right_sub_trees = dfs(i + 1, end)
 
             for left_tree in left_sub_trees:
                 for right_tree in right_sub_trees:
+                    root = TreeNode(i)
                     root.left = left_tree
                     root.right = right_tree
 
