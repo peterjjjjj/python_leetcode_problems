@@ -12,24 +12,33 @@ def generate_trees(n: int) -> list[TreeNode]:
     :return: list[TreeNode]
     """
 
-    trees_list = []
+    if n == 0:
+        return []
 
-    def dfs(start: int, end: int) -> TreeNode:
-        nonlocal trees_list
-        if start == end:
-            return TreeNode(start)
+    def dfs(start: int, end: int) -> list[TreeNode]:
+        all_trees_for_range = []
 
         if start > end:
-            return None
+            return [None]
+
+        if start == end:
+            return [TreeNode(start)]
 
         for i in range(start, end+1):
-            tree = TreeNode(i)
-            tree.left = dfs(start, i-1)
-            tree.right = dfs(i+1, end)
-            trees_list.append(tree)
+            root = TreeNode(i)
+            left_sub_trees = dfs(start, i - 1)
+            right_sub_trees = dfs(i + 1, end)
 
-    dfs(1, n)
-    return trees_list
+            for left_tree in left_sub_trees:
+                for right_tree in right_sub_trees:
+                    root.left = left_tree
+                    root.right = right_tree
+
+                    all_trees_for_range.append(root)
+
+        return all_trees_for_range
+
+    return dfs(1, n)
 
 if __name__ == '__main__':
     print(generate_trees(3))
