@@ -25,9 +25,10 @@ def sum_root_to_leaf_numbers(root: TreeNode) -> int:
 
         if node.left:
             dfs(node.left, path)
+            path.pop()
         if node.right:
             dfs(node.right, path)
-        path.pop()
+            path.pop()
 
     dfs(root, [])
 
@@ -43,7 +44,7 @@ def sum_root_to_leaf_numbers(root: TreeNode) -> int:
 
 if __name__ == '__main__':
     tree = TreeNode(1)
-    tree.right = TreeNode(5)
+    tree.right = TreeNode(2)
     print(sum_root_to_leaf_numbers(tree))
 
 
