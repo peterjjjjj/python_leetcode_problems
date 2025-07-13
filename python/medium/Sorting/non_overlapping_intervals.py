@@ -30,6 +30,7 @@ def remove_overlapping_intervals(intervals: list[list[int]]) -> int:
     return remove_intervals_count
 
 
+
 if __name__ == '__main__':
     print(remove_overlapping_intervals([[1,100],[11,22],[1,11],[2,12]]))
 
