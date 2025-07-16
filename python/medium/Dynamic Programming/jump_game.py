@@ -10,10 +10,12 @@ def canJump(nums: list[int]) -> bool:
     max_length = nums[0]
     target_index = len(nums) - 1
 
+
     for i in range(len(nums) - 1):
-        current_max_length = i + nums[i]
-        if current_max_length >= max_length:
-            max_length = current_max_length
+        if i <= max_length:
+            current_max_length = i + nums[i]
+            if current_max_length >= max_length:
+                max_length = current_max_length
 
     return max_length >= target_index
 
@@ -22,3 +24,4 @@ if __name__ == '__main__':
     print(canJump([2, 3, 1, 1, 4]))
     print(canJump([3, 2, 1, 0, 4]))
     print(canJump([1]))
+    print(canJump([0,2,3]))
