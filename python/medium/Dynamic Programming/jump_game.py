@@ -7,7 +7,7 @@ def canJump(nums: list[int]) -> bool:
     :return: boolean
     """
 
-    max_length = -1
+    max_length = nums[0]
     target_index = len(nums) - 1
 
     for i in range(len(nums) - 1):
@@ -21,3 +21,4 @@ def canJump(nums: list[int]) -> bool:
 if __name__ == '__main__':
     print(canJump([2, 3, 1, 1, 4]))
     print(canJump([3, 2, 1, 0, 4]))
+    print(canJump([1]))
