@@ -14,13 +14,16 @@ def isBipartite(graph: list[list[int]]) -> bool:
     def dfs(current_node: int, current_set: int) -> bool:
         #If current node has been recorded.
         if current_node in nodes_set:
+            #And the previous record has different value.
             if nodes_set[current_node] != current_set:
                 return False
 
             return True
 
+        #Mark the current node with the set number.
         nodes_set[current_node] = current_set
 
+        #Loop through all neighbors next to current_node.
         for neighbor_node in graph[current_node]:
             #Use bitwise to switch between 1 and 0.
             if not dfs(neighbor_node, (current_set ^ 1)):
@@ -28,6 +31,7 @@ def isBipartite(graph: list[list[int]]) -> bool:
 
         return True
 
+    #In case not all nodes are connected.
     for i in range(len(graph)):
         if i not in nodes_set:
             if not dfs(i, 0):
