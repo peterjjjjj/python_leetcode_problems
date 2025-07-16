@@ -7,11 +7,14 @@ def canJump(nums: list[int]) -> bool:
     :return: boolean
     """
 
+    #Initialize the max length can get to starts at the origin.
     max_length = nums[0]
+    #The last index.
     target_index = len(nums) - 1
 
 
     for i in range(len(nums) - 1):
+        #If the current index is reachable.
         if i <= max_length:
             current_max_length = i + nums[i]
             if current_max_length >= max_length:
