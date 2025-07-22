@@ -7,6 +7,9 @@ def climb_stairs(n: int) -> int:
     return: int
     """
 
+    if n == 1:
+        return 1
+
     dp = []
     dp.append(1)
     dp.append(2)
@@ -19,4 +22,4 @@ def climb_stairs(n: int) -> int:
     return dp[-1]
 
 if __name__ == '__main__':
-    print(climb_stairs(3))
+    print(climb_stairs(2))
