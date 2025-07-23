@@ -6,6 +6,9 @@ def max_cookies(g: list[int], s: list[int]) -> int:
     :return: int
     """
 
+    if not g or not s:
+        return 0
+
     i = 0
     count = 0
 
