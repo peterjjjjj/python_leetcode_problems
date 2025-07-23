@@ -16,8 +16,10 @@ def max_cookies(g: list[int], s: list[int]) -> int:
         if s[i] >= g[j]:
             count += 1
             i += 1
+            if i >= len(s):
+                break
 
     return count
 
 if __name__ == "__main__":
-    print(max_cookies([1,2,3], [1,1]))
+    print(max_cookies([1,2,3], [3]))
