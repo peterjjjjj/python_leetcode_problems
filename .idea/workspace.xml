@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83246569-825b-4424-ad1b-379dc0d9bc14" name="Changes" comment="renamed folder and directory">
+    <list default="true" id="83246569-825b-4424-ad1b-379dc0d9bc14" name="Changes" comment="combination_sum_2_0">
+      <change afterPath="$PROJECT_DIR$/python/medium/Recursion/palindrom_partition.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/medium/Recursion/combination_sum.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/medium/Recursion/combination_sum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/medium/Recursion/combination_sum_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/medium/Recursion/combination_sum_2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,30 +19,37 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "peterjjjjj"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;peterjjjjj&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/peterjjjjj/algorithmScratch.git",
-    "accountId": "cc290e51-6f39-45bd-b6e7-0e093c28c83a"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/peterjjjjj/algorithmScratch.git&quot;,
+    &quot;accountId&quot;: &quot;cc290e51-6f39-45bd-b6e7-0e093c28c83a&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 7
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="30LQoeHqEmXLOjSKp6Gepj1OPJR" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.combination_sum.executor": "Run",
+    "Python.combination_sum_2.executor": "Run",
     "Python.min_window_substring.executor": "Run",
+    "Python.palindrom_partition.executor": "Debug",
+    "Python.permutations.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/mengfeijin/Desktop/pycharm/python_algrithms",
@@ -68,6 +79,8 @@
       <option name="presentableId" value="Default" />
       <updated>1753404550527</updated>
       <workItem from="1753404551567" duration="6756000" />
+      <workItem from="1753830295437" duration="11938000" />
+      <workItem from="1754340091165" duration="8818000" />
     </task>
     <task id="LOCAL-00001" summary="renamed folder and directory">
       <option name="closed" value="true" />
@@ -77,7 +90,23 @@
       <option name="project" value="LOCAL" />
       <updated>1753404635557</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="renamed folder and directory">
+      <option name="closed" value="true" />
+      <created>1753830334114</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1753830334114</updated>
+    </task>
+    <task id="LOCAL-00003" summary="combination_sum_2_0">
+      <option name="closed" value="true" />
+      <created>1754244286596</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1754244286596</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,9 +114,35 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="renamed folder and directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="renamed folder and directory" />
+    <MESSAGE value="combination_sum_2_0" />
+    <option name="LAST_COMMIT_MESSAGE" value="combination_sum_2_0" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/python/medium/Recursion/permutations.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/python/medium/Recursion/combination_sum_2.py</url>
+          <line>68</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/python/medium/Recursion/palindrom_partition.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/python_algrithms$min_window_substring.coverage" NAME="min_window_substring Coverage Results" MODIFIED="1753404563574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/hard/Sliding Window" />
+    <SUITE FILE_PATH="coverage/python_algrithms$combination_sum_2.coverage" NAME="combination_sum_2 Coverage Results" MODIFIED="1754346921408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/medium/Recursion" />
+    <SUITE FILE_PATH="coverage/python_algrithms$combination_sum.coverage" NAME="combination_sum Coverage Results" MODIFIED="1754345219192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/medium/Recursion" />
+    <SUITE FILE_PATH="coverage/python_algrithms$permutations.coverage" NAME="permutations Coverage Results" MODIFIED="1753831616030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/medium/Recursion" />
+    <SUITE FILE_PATH="coverage/python_algrithms$palindrom_partition.coverage" NAME="palindrom_partition Coverage Results" MODIFIED="1754348189091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/medium/Recursion" />
   </component>
 </project>
