@@ -51,9 +51,11 @@ def word_ladder_bfs(start: str, end: str, word_list: list[str]) -> int:
                         if current_word == end:
                             steps += 1
                             return steps
+                        #Update the queue and visited.
                         queue.append((current_word, steps + 1))
                         visited_list.add(current_word)
 
+            #Reset the current_word after the j loop is over.
             current_word = original_word[:]
 
     return 0
