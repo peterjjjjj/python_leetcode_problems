@@ -47,8 +47,9 @@ def word_ladder_bfs(start: str, end: str, word_list: list[str]) -> int:
                 current_word = ''.join(current_word)
 
                 if current_word not in visited_list:
-                    if current_word in word_list:
+                    if current_word in word_set:
                         if current_word == end:
+                            steps += 1
                             return steps
                         queue.append((current_word, steps + 1))
                         visited_list.add(current_word)
