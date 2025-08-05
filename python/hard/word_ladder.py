@@ -25,6 +25,7 @@ def word_ladder_bfs(start: str, end: str, word_list: list[str]) -> int:
     steps = 0
 
     while queue:
+        #Deque.
         current_word, steps = queue.popleft()
 
         if current_word == end:
