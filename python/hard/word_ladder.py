@@ -1,5 +1,7 @@
+import collections
 
-def word_ladder(start: str, end: str, word_list: list[str]) -> int:
+
+def word_ladder_bfs(start: str, end: str, word_list: list[str]) -> int:
     """
     Given two words, beginWord and endWord, and a dictionary wordList,
     return the number of words in the shortest transformation sequence from beginWord to endWord or 0 if no such sequence exists.
@@ -11,47 +13,52 @@ def word_ladder(start: str, end: str, word_list: list[str]) -> int:
     :return: int
     """
 
-    min_steps = 0
-    visited_words = set()
-    current_word = list(start)
-    hash_table = dict()
-    travel_list = list()
+    word_set = set(word_list)
 
-    def search_next(word: list[str]) -> int:
-        nonlocal hash_table, min_steps
+    #Queue for the words to process.
+    queue = collections.deque([(start, 1)])
+    #Visited words.
+    visited_list = set()
 
-        min_steps += 1
+    visited_list.add(start)
 
-        for i in range(len(start)):
+    steps = 0
+
+    while queue:
+        current_word, steps = queue.popleft()
+
+        if current_word == end:
+            return steps
+
+        for i in range(len(str(current_word))):
+            #Use ASCII to generate 26 letters to find all combinations of possible words.
+            original_word = current_word[:]
+            current_word = list(current_word)
+
+
             for j in range(26):
-                new_word = word[:]
-                new_word[i] = chr(ord('a') + j)
-                result = ''.join(new_word)
+                # To process the word, convert to list.
+                current_word = list(current_word)
 
-                if result == end:
-                    return min_steps
+                #Replace the index with 26 letters.
+                current_word[i] = chr(ord('a') + j)
+                #Convert back to str.
+                current_word = ''.join(current_word)
 
-                if result in word_list:
-                    key = word[:i] + word[i + 1:]
-                    key = ''.join(key)
-                    if not key in hash_table:
-                        hash_table[key] = result
-                        visited_words.add(result)
-                        travel_list.append(result)
+                if current_word not in visited_list:
+                    if current_word in word_list:
+                        if current_word == end:
+                            return steps
+                        queue.append((current_word, steps + 1))
+                        visited_list.add(current_word)
 
-        next_word = travel_list.pop(0)
-        next_word = list(next_word)
-        search_next(next_word)
+            current_word = original_word[:]
 
-        return 0
+    return 0
 
-    for _ in range(len(word_list)):
-        search_next(current_word)
-
-    return min_steps
 
 if __name__ == '__main__':
-    print(word_ladder(start='hit', end='cog', word_list=["hot","dot","dog","lot","log","cog"]))
+    print(word_ladder_bfs(start='hit', end='cog', word_list=["hot","dot","dog","lot","log","cog"]))
 
 
 
