@@ -1,5 +1,6 @@
 def fibonacci(n: int) -> int:
     memo = {}
+
     def calculation(n: int) -> int:
         nonlocal memo
         if n in memo:
@@ -13,6 +14,9 @@ def fibonacci(n: int) -> int:
         return result
 
     return calculation(n)
+
+
+
 
 if __name__ == '__main__':
     print(fibonacci(3))

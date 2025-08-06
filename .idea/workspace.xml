@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83246569-825b-4424-ad1b-379dc0d9bc14" name="Changes" comment="word_ladder_0" />
+    <list default="true" id="83246569-825b-4424-ad1b-379dc0d9bc14" name="Changes" comment="word_ladder_1">
+      <change afterPath="$PROJECT_DIR$/python/medium/Dynamic Programming/coin_change.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/easy/Trees/fibonacci_number.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/easy/fibonacci_number.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/medium/Recursion/permutations.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/medium/Recursion/permutations.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,9 +47,10 @@
   "keyToString": {
     "Python.combination_sum.executor": "Run",
     "Python.combination_sum_2.executor": "Run",
+    "Python.fibonacci_number.executor": "Run",
     "Python.min_window_substring.executor": "Run",
     "Python.palindrom_partition.executor": "Run",
-    "Python.permutations.executor": "Debug",
+    "Python.permutations.executor": "Run",
     "Python.word_ladder.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -58,6 +64,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/python/easy" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -76,7 +87,7 @@
       <updated>1753404550527</updated>
       <workItem from="1753404551567" duration="6756000" />
       <workItem from="1753830295437" duration="11938000" />
-      <workItem from="1754340091165" duration="15460000" />
+      <workItem from="1754340091165" duration="25236000" />
     </task>
     <task id="LOCAL-00001" summary="renamed folder and directory">
       <option name="closed" value="true" />
@@ -142,7 +153,23 @@
       <option name="project" value="LOCAL" />
       <updated>1754437203985</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="word_ladder_1">
+      <option name="closed" value="true" />
+      <created>1754438092016</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1754438092016</updated>
+    </task>
+    <task id="LOCAL-00010" summary="word_ladder_1">
+      <option name="closed" value="true" />
+      <created>1754438225808</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1754438225808</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,16 +180,12 @@
     <MESSAGE value="combination_sum_2_0" />
     <MESSAGE value="Some recursion reviews." />
     <MESSAGE value="word_ladder_0" />
-    <option name="LAST_COMMIT_MESSAGE" value="word_ladder_0" />
+    <MESSAGE value="word_ladder_1" />
+    <option name="LAST_COMMIT_MESSAGE" value="word_ladder_1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/python/medium/Recursion/permutations.py</url>
-          <line>24</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/python/medium/Recursion/combination_sum_2.py</url>
           <line>68</line>
@@ -180,8 +203,9 @@
     <SUITE FILE_PATH="coverage/python_algrithms$min_window_substring.coverage" NAME="min_window_substring Coverage Results" MODIFIED="1753404563574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/hard/Sliding Window" />
     <SUITE FILE_PATH="coverage/python_algrithms$combination_sum_2.coverage" NAME="combination_sum_2 Coverage Results" MODIFIED="1754346921408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/medium/Recursion" />
     <SUITE FILE_PATH="coverage/python_algrithms$combination_sum.coverage" NAME="combination_sum Coverage Results" MODIFIED="1754345219192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/medium/Recursion" />
-    <SUITE FILE_PATH="coverage/python_algrithms$permutations.coverage" NAME="permutations Coverage Results" MODIFIED="1753831616030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/medium/Recursion" />
+    <SUITE FILE_PATH="coverage/python_algrithms$permutations.coverage" NAME="permutations Coverage Results" MODIFIED="1754441256097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/medium/Recursion" />
+    <SUITE FILE_PATH="coverage/python_algrithms$fibonacci_number.coverage" NAME="fibonacci_number Coverage Results" MODIFIED="1754442072175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/easy" />
     <SUITE FILE_PATH="coverage/python_algrithms$palindrom_partition.coverage" NAME="palindrom_partition Coverage Results" MODIFIED="1754349457243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/medium/Recursion" />
-    <SUITE FILE_PATH="coverage/python_algrithms$word_ladder.coverage" NAME="word_ladder Coverage Results" MODIFIED="1754436389775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/hard" />
+    <SUITE FILE_PATH="coverage/python_algrithms$word_ladder.coverage" NAME="word_ladder Coverage Results" MODIFIED="1754438085393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/hard" />
   </component>
 </project>
