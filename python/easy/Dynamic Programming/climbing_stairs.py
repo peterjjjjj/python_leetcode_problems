@@ -21,5 +21,21 @@ def climb_stairs(n: int) -> int:
 
     return dp[-1]
 
+def climb_stairs_2(n: int) -> int:
+    """
+
+    """
+
+    dp = [float('inf')] * (n+1)
+    dp[0] = 0
+    dp[1] = 1
+    dp[2] = 2
+
+    for i in range(3, n+1):
+        dp[i] = dp[i-1] + dp[i-2]
+
+    return int(dp[-1])
+
 if __name__ == '__main__':
     print(climb_stairs(2))
+    print(climb_stairs_2(2))
