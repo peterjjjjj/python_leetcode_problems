@@ -28,7 +28,7 @@ def climb_stairs_2(n: int) -> int:
     if n == 1:
         return 1
 
-    dp = [float('inf')] * (n+1)
+    dp = [0 for i in range(n+1)]
 
     dp[0] = 0
     dp[1] = 1
