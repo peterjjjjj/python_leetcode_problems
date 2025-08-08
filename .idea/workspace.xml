@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="83246569-825b-4424-ad1b-379dc0d9bc14" name="Changes" comment="dp review.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/easy/Dynamic Programming/climbing_stairs.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/easy/Dynamic Programming/climbing_stairs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/easy/Dynamic Programming/longest_common_subsequence.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/easy/Dynamic Programming/longest_common_subsequence.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/medium/Dynamic Programming/coin_change.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/medium/Dynamic Programming/coin_change.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +44,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.climbing_stairs.executor": "Run",
-    "Python.coin_change.executor": "Run",
+    "Python.coin_change.executor": "Debug",
     "Python.combination_sum.executor": "Run",
     "Python.combination_sum_2.executor": "Run",
     "Python.fibonacci_number.executor": "Run",
@@ -90,7 +89,7 @@
       <updated>1753404550527</updated>
       <workItem from="1753404551567" duration="6756000" />
       <workItem from="1753830295437" duration="11938000" />
-      <workItem from="1754340091165" duration="42843000" />
+      <workItem from="1754340091165" duration="46456000" />
     </task>
     <task id="LOCAL-00001" summary="renamed folder and directory">
       <option name="closed" value="true" />
@@ -220,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754676798200</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="dp review.">
+      <option name="closed" value="true" />
+      <created>1754683818309</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1754683818309</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,6 +262,11 @@
           <line>20</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/python/medium/Dynamic Programming/coin_change.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -267,7 +279,7 @@
     <SUITE FILE_PATH="coverage/python_algrithms$fibonacci_number.coverage" NAME="fibonacci_number Coverage Results" MODIFIED="1754442072175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/easy" />
     <SUITE FILE_PATH="coverage/python_algrithms$min_cost_climbing_stairs.coverage" NAME="min_cost_climbing_stairs Coverage Results" MODIFIED="1754608005870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/easy/Dynamic Programming" />
     <SUITE FILE_PATH="coverage/python_algrithms$palindrom_partition.coverage" NAME="palindrom_partition Coverage Results" MODIFIED="1754349457243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/medium/Recursion" />
-    <SUITE FILE_PATH="coverage/python_algrithms$coin_change.coverage" NAME="coin_change Coverage Results" MODIFIED="1754521154617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/medium/Dynamic Programming" />
+    <SUITE FILE_PATH="coverage/python_algrithms$coin_change.coverage" NAME="coin_change Coverage Results" MODIFIED="1754686512394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/medium/Dynamic Programming" />
     <SUITE FILE_PATH="coverage/python_algrithms$word_ladder.coverage" NAME="word_ladder Coverage Results" MODIFIED="1754438085393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/hard" />
     <SUITE FILE_PATH="coverage/python_algrithms$climbing_stairs.coverage" NAME="climbing_stairs Coverage Results" MODIFIED="1754677291195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/easy/Dynamic Programming" />
   </component>

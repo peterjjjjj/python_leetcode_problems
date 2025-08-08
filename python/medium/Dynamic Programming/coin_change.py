@@ -29,4 +29,4 @@ def coin_change(coins: list[int], amount: int) -> int:
 
 
 if __name__ == '__main__':
-    print(coin_change([1, 2, 5], 11))
+    print(coin_change([2], 3))
