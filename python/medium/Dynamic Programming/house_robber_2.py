@@ -1,24 +1,26 @@
 def rob(nums: list[int]) -> int:
     """
     LC 213.
+
+    There are 2 scenarios, rubbing the first or the last.
+    Compare and return.
     """
 
     if len(nums) == 1:
         return nums[0]
 
-    #Construct the dp table.
-    dp = [0 for _ in range(len(nums))]
+    first_house_dp = [0 for _ in range(len(nums))]
+    last_house_dp = [0 for _ in range(len(nums))]
 
-    dp[1] = max(nums[0], nums[-1])
+    first_house_dp[0] = nums[0]
+    last_house_dp[0] = nums[1]
 
-    for i in range(2, len(nums)):
-        dp[i] = max(dp[i - 1], dp[i - 2] + nums[i - 1])
+    for i in range(1, len(nums)):
+        first_house_dp[i] = max(first_house_dp[i - 1], first_house_dp[i - 2] + nums[i - 1])
+        last_house_dp[i] = max(last_house_dp[i - 1], last_house_dp[i - 2] + nums[i])
 
 
-    return dp[-1]
+    return max(first_house_dp[-1], last_house_dp[-1])
 
 if '__main__' == __name__:
-    print(rob([2,3,2]))
-    print(rob([1,2,3,1]))
-    print(rob([2,1,1,2]))
-    print(rob([1,2,3]))
+    print(rob([1,2,1,1]))
