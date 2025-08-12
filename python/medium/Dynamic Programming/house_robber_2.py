@@ -12,8 +12,15 @@ def rob(nums: list[int]) -> int:
     if len(nums) % 2 == 0:
         dp[1] = nums[0]
 
-    for i in range(2, len(nums) + 1):
+    for i in range(2, len(nums)):
         dp[i] = max(dp[i - 1], nums[i - 1] + dp[i - 2])
+
+
+    if len(nums) % 2 == 1:
+        dp[len(nums)] = max(dp[len(nums) - 1], max(nums[len(nums) - 1], nums[0]) + dp[len(nums) - 2])
+
+    else:
+        dp[len(nums)] = max(dp[len(nums) - 1], nums[len(nums) - 1] + dp[len(nums) - 2])
 
     return dp[-1]
 
