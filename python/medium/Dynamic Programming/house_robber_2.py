@@ -15,6 +15,9 @@ def rob(nums: list[int]) -> int:
     first_house_dp[1] = nums[0]
     last_house_dp[1] = nums[1]
 
+    #The robbing logic is the same as robbing house 1.
+    #The first scenario, rob first not last, is nums[:length - 1].
+    #Second scenario, rob last not first, is nums[1:].
     for i in range(2, len(nums)):
         first_house_dp[i] = max(first_house_dp[i - 1], first_house_dp[i - 2] + nums[i - 1])
         last_house_dp[i] = max(last_house_dp[i - 1], last_house_dp[i - 2] + nums[i])
