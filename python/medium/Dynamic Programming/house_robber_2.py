@@ -3,6 +3,9 @@ def rob(nums: list[int]) -> int:
     LC 213.
     """
 
+    if len(nums) == 1:
+        return nums[0]
+
     #Construct the dp table.
     dp = [0 for _ in range(len(nums) + 1)]
 
