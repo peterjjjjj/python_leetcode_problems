@@ -10,7 +10,7 @@ def max_path_sum(root: TreeNode) -> int:
     """
 
     #Initialize the dp table.
-    dp = [0]
+    dp = [root.val]
     i = 0
     max_sum = root.val
 
@@ -28,9 +28,13 @@ def max_path_sum(root: TreeNode) -> int:
         #Increment index.
         i += 1
 
-        #If including the current node would make the path larger.
-        #Update the max_sum and dp list.
-        if dp[i - 1] + node.val >+ max_sum:
+        current_path_sum = dp[i - 1] + node.val
+
+        if node.val > current_path_sum:
+            max_sum = node.val
+            dp[i] = max_sum
+
+        elif current_path_sum >= max_sum:
             max_sum = dp[i - 1] + node.val
             dp[i] = max_sum
 
@@ -43,9 +47,7 @@ def max_path_sum(root: TreeNode) -> int:
 
 
 if __name__ == '__main__':
-    tree = TreeNode(-10)
-    tree.left = TreeNode(9)
-    tree.right = TreeNode(20)
-    tree.right.left = TreeNode(15)
-    tree.right.right = TreeNode(7)
+    tree = TreeNode(1)
+    tree.left = TreeNode(-2)
+    tree.right = TreeNode(3)
     print(max_path_sum(tree))
