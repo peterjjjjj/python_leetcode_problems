@@ -12,7 +12,7 @@ def max_path_sum(root: TreeNode) -> int:
     #Initialize the dp table.
     dp = [0]
     i = 0
-    max_sum = 0
+    max_sum = root.val
 
     def dfs(node: TreeNode) -> None:
         nonlocal max_sum, dp, i
