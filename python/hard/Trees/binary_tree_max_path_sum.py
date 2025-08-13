@@ -32,11 +32,11 @@ def max_path_sum(root: TreeNode) -> int:
 
         if node.val > current_path_sum:
             max_sum = node.val
-            dp[i] = max_sum
+            dp[i] = node.val
 
         elif current_path_sum >= max_sum:
             max_sum = dp[i - 1] + node.val
-            dp[i] = max_sum
+            dp[i] = dp[i - 1] + node.val
 
         dfs(node.right)
 
