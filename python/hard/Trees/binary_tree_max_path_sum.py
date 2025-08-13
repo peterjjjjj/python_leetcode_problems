@@ -1,3 +1,6 @@
+import math
+
+
 class TreeNode:
     def __init__(self, val, left=None, right=None):
         self.val = val
@@ -9,36 +12,22 @@ def max_path_sum(root: TreeNode) -> int:
     LC 124.
     """
 
-    #Initialize the dp table.
-    dp = [0]
-    i = 0
-    max_sum = root.val
+    max_sum = -math.inf
 
-    def dfs(node: TreeNode) -> None:
-        nonlocal max_sum, dp, i
+    def dfs(node: TreeNode) -> int:
+        nonlocal max_sum
 
         if node is None:
-            return
+            return 0
 
-        #Use inorder to make sure that all the nodes are linked.
-        dfs(node.left)
+        left_sum = max(dfs(node.left), 0)
+        right_sum = max(dfs(node.right), 0)
 
-        #Append an 0 to the dp list.
-        dp.append(0)
-        #Increment index.
-        i += 1
+        current_path_sum = node.val + left_sum + right_sum
 
-        current_path_sum = dp[i - 1] + node.val
+        max_sum = max(max_sum, current_path_sum)
 
-        if node.val > current_path_sum and node.val > max_sum:
-            max_sum = node.val
-            dp[i] = node.val
-
-        elif current_path_sum >= max_sum:
-            max_sum = dp[i - 1] + node.val
-            dp[i] = dp[i - 1] + node.val
-
-        dfs(node.right)
+        return node.val + max(left_sum, right_sum)
 
     dfs(root)
 
@@ -47,6 +36,11 @@ def max_path_sum(root: TreeNode) -> int:
 
 
 if __name__ == '__main__':
-    tree = TreeNode(-2)
-    tree.left = TreeNode(-1)
+    tree = TreeNode(1)
+    tree.left = TreeNode(-2)
+    tree.right = TreeNode(-3)
+    tree.left.left = TreeNode(1)
+    tree.left.right = TreeNode(3)
+    tree.right.left = TreeNode(-2)
+    tree.left.left.left = TreeNode(-1)
     print(max_path_sum(tree))
