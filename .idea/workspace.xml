@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83246569-825b-4424-ad1b-379dc0d9bc14" name="Changes" comment="unique_paths_0" />
+    <list default="true" id="83246569-825b-4424-ad1b-379dc0d9bc14" name="Changes" comment="binary_tree_max_path_sum_4" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,11 +40,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.binary_tree_max_path_sum.executor": "Debug",
+    "Python.binary_tree_paths.executor": "Run",
     "Python.climbing_stairs.executor": "Run",
     "Python.coin_change.executor": "Debug",
     "Python.combination_sum.executor": "Run",
     "Python.combination_sum_2.executor": "Run",
+    "Python.diameter_binary_tree.executor": "Run",
     "Python.fibonacci_number.executor": "Run",
+    "Python.house_robber.executor": "Run",
+    "Python.house_robber_2.executor": "Run",
     "Python.longest_common_subsequence.executor": "Debug",
     "Python.min_cost_climbing_stairs.executor": "Run",
     "Python.min_window_substring.executor": "Run",
@@ -88,6 +93,7 @@
       <workItem from="1753404551567" duration="6756000" />
       <workItem from="1753830295437" duration="11938000" />
       <workItem from="1754340091165" duration="51559000" />
+      <workItem from="1754948312662" duration="26189000" />
     </task>
     <task id="LOCAL-00001" summary="renamed folder and directory">
       <option name="closed" value="true" />
@@ -241,7 +247,167 @@
       <option name="project" value="LOCAL" />
       <updated>1754803404117</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="unique_paths_2_0">
+      <option name="closed" value="true" />
+      <created>1755019594906</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1755019594906</updated>
+    </task>
+    <task id="LOCAL-00021" summary="unique_paths_2_0">
+      <option name="closed" value="true" />
+      <created>1755019700707</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1755019700707</updated>
+    </task>
+    <task id="LOCAL-00022" summary="house_robber_2_0">
+      <option name="closed" value="true" />
+      <created>1755038238760</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1755038238760</updated>
+    </task>
+    <task id="LOCAL-00023" summary="house_robber_2_1">
+      <option name="closed" value="true" />
+      <created>1755038296505</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1755038296505</updated>
+    </task>
+    <task id="LOCAL-00024" summary="house_robber_2_2">
+      <option name="closed" value="true" />
+      <created>1755038724904</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1755038724904</updated>
+    </task>
+    <task id="LOCAL-00025" summary="house_robber_2_3">
+      <option name="closed" value="true" />
+      <created>1755038977796</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1755038977796</updated>
+    </task>
+    <task id="LOCAL-00026" summary="house_robber_2_4">
+      <option name="closed" value="true" />
+      <created>1755039054796</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1755039054796</updated>
+    </task>
+    <task id="LOCAL-00027" summary="house_robber_2_4">
+      <option name="closed" value="true" />
+      <created>1755039087872</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1755039087872</updated>
+    </task>
+    <task id="LOCAL-00028" summary="house_robber_2_5">
+      <option name="closed" value="true" />
+      <created>1755039850102</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1755039850102</updated>
+    </task>
+    <task id="LOCAL-00029" summary="house_robber_2_5">
+      <option name="closed" value="true" />
+      <created>1755039909459</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1755039909459</updated>
+    </task>
+    <task id="LOCAL-00030" summary="house_robber_2_6">
+      <option name="closed" value="true" />
+      <created>1755040025250</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1755040025250</updated>
+    </task>
+    <task id="LOCAL-00031" summary="house_robber_2_6">
+      <option name="closed" value="true" />
+      <created>1755040200516</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1755040200516</updated>
+    </task>
+    <task id="LOCAL-00032" summary="house_robber_2_6">
+      <option name="closed" value="true" />
+      <created>1755040760436</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1755040760436</updated>
+    </task>
+    <task id="LOCAL-00033" summary="house_robber_2_6">
+      <option name="closed" value="true" />
+      <created>1755117925315</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1755117925315</updated>
+    </task>
+    <task id="LOCAL-00034" summary="binary_tree_max_path_sum_0">
+      <option name="closed" value="true" />
+      <created>1755119200257</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1755119200257</updated>
+    </task>
+    <task id="LOCAL-00035" summary="binary_tree_max_path_sum_1">
+      <option name="closed" value="true" />
+      <created>1755119263155</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1755119263155</updated>
+    </task>
+    <task id="LOCAL-00036" summary="binary_tree_max_path_sum_2">
+      <option name="closed" value="true" />
+      <created>1755120142759</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1755120142759</updated>
+    </task>
+    <task id="LOCAL-00037" summary="binary_tree_max_path_sum_2">
+      <option name="closed" value="true" />
+      <created>1755120223419</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1755120223419</updated>
+    </task>
+    <task id="LOCAL-00038" summary="binary_tree_max_path_sum_3">
+      <option name="closed" value="true" />
+      <created>1755120430840</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1755120430840</updated>
+    </task>
+    <task id="LOCAL-00039" summary="binary_tree_max_path_sum_4">
+      <option name="closed" value="true" />
+      <created>1755121277812</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1755121277812</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,14 +423,27 @@
     <MESSAGE value="min_cost_climbing_stairs_0" />
     <MESSAGE value="dp review." />
     <MESSAGE value="unique_paths_0" />
-    <option name="LAST_COMMIT_MESSAGE" value="unique_paths_0" />
+    <MESSAGE value="unique_paths_2_0" />
+    <MESSAGE value="house_robber_2_0" />
+    <MESSAGE value="house_robber_2_1" />
+    <MESSAGE value="house_robber_2_2" />
+    <MESSAGE value="house_robber_2_3" />
+    <MESSAGE value="house_robber_2_4" />
+    <MESSAGE value="house_robber_2_5" />
+    <MESSAGE value="house_robber_2_6" />
+    <MESSAGE value="binary_tree_max_path_sum_0" />
+    <MESSAGE value="binary_tree_max_path_sum_1" />
+    <MESSAGE value="binary_tree_max_path_sum_2" />
+    <MESSAGE value="binary_tree_max_path_sum_3" />
+    <MESSAGE value="binary_tree_max_path_sum_4" />
+    <option name="LAST_COMMIT_MESSAGE" value="binary_tree_max_path_sum_4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/python/medium/Recursion/combination_sum_2.py</url>
-          <line>68</line>
+          <line>70</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -282,12 +461,28 @@
           <line>18</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/python/medium/Dynamic Programming/house_robber.py</url>
+          <line>39</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/python/easy/Trees/diameter_binary_tree.py</url>
+          <line>39</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/python/hard/Trees/binary_tree_max_path_sum.py</url>
+          <line>45</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/python_algrithms$combination_sum_2.coverage" NAME="combination_sum_2 Coverage Results" MODIFIED="1754346921408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/medium/Recursion" />
     <SUITE FILE_PATH="coverage/python_algrithms$longest_common_subsequence.coverage" NAME="longest_common_subsequence Coverage Results" MODIFIED="1754677874471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/easy/Dynamic Programming" />
+    <SUITE FILE_PATH="coverage/python_algrithms$combination_sum_2.coverage" NAME="combination_sum_2 Coverage Results" MODIFIED="1754949052301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/medium/Recursion" />
+    <SUITE FILE_PATH="coverage/python_algrithms$binary_tree_max_path_sum.coverage" NAME="binary_tree_max_path_sum Coverage Results" MODIFIED="1755122977427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/hard/Trees" />
     <SUITE FILE_PATH="coverage/python_algrithms$combination_sum.coverage" NAME="combination_sum Coverage Results" MODIFIED="1754345219192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/medium/Recursion" />
     <SUITE FILE_PATH="coverage/python_algrithms$permutations.coverage" NAME="permutations Coverage Results" MODIFIED="1754441256097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/medium/Recursion" />
     <SUITE FILE_PATH="coverage/python_algrithms$word_ladder.coverage" NAME="word_ladder Coverage Results" MODIFIED="1754438085393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/hard" />
@@ -295,8 +490,12 @@
     <SUITE FILE_PATH="coverage/python_algrithms$min_window_substring.coverage" NAME="min_window_substring Coverage Results" MODIFIED="1753404563574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/hard/Sliding Window" />
     <SUITE FILE_PATH="coverage/python_algrithms$fibonacci_number.coverage" NAME="fibonacci_number Coverage Results" MODIFIED="1754442072175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/easy" />
     <SUITE FILE_PATH="coverage/python_algrithms$min_cost_climbing_stairs.coverage" NAME="min_cost_climbing_stairs Coverage Results" MODIFIED="1754608005870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/easy/Dynamic Programming" />
+    <SUITE FILE_PATH="coverage/python_algrithms$house_robber.coverage" NAME="house_robber Coverage Results" MODIFIED="1755020610633" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/medium/Dynamic Programming" />
     <SUITE FILE_PATH="coverage/python_algrithms$palindrom_partition.coverage" NAME="palindrom_partition Coverage Results" MODIFIED="1754349457243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/medium/Recursion" />
+    <SUITE FILE_PATH="coverage/python_algrithms$binary_tree_paths.coverage" NAME="binary_tree_paths Coverage Results" MODIFIED="1755044297853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/easy/Trees" />
     <SUITE FILE_PATH="coverage/python_algrithms$coin_change.coverage" NAME="coin_change Coverage Results" MODIFIED="1754686512394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/medium/Dynamic Programming" />
+    <SUITE FILE_PATH="coverage/python_algrithms$diameter_binary_tree.coverage" NAME="diameter_binary_tree Coverage Results" MODIFIED="1755047367127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/easy/Trees" />
+    <SUITE FILE_PATH="coverage/python_algrithms$house_robber_2.coverage" NAME="house_robber_2 Coverage Results" MODIFIED="1755040742712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/medium/Dynamic Programming" />
     <SUITE FILE_PATH="coverage/python_algrithms$unique_paths.coverage" NAME="unique_paths Coverage Results" MODIFIED="1754690656627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/medium/Dynamic Programming" />
   </component>
 </project>
