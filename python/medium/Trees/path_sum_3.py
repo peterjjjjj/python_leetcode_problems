@@ -1,3 +1,6 @@
+from collections import defaultdict
+
+
 class TreeNode:
     def __init__ (self, val: int, left = None, right = None):
         self.val = val
@@ -11,40 +14,49 @@ def path_sum(root: TreeNode, target_sum: int) -> int:
     """
 
     #Use preorder for the dfs to track the current sum.
-    #Hasmap to track past sums.
+    #Hasmap to track past cumulative sums.
     #And backtrack in the recursion.
 
     path_count = 0
-    map = [0]
-    i = 0
+    map = defaultdict(int)
+    map[0] = 1
 
-    def dfs(node: TreeNode) -> None:
-        nonlocal path_count, i, map
+    def dfs(node: TreeNode, current_sum: int) -> None:
+        nonlocal path_count
 
-        i += 1
+        if node is None:
+            return
 
-        map.append(node.val)
+        #The cumulative sum from root to node.
+        current_sum += node.val
 
-        for j in range(i):
-            current_sum = node.val + map[j]
-            if current_sum == target_sum:
-                path_count += 1
+        #The required_sum is the cumulative sum from the root to a node,
+        #Such that can be taken out and so the rest of the path is equal to target.
+        required_sum = current_sum - target_sum
+        if required_sum in map:
+            path_count += map[required_sum]
 
-        if node.left is not None:
-            dfs(node.left)
-        if node.right is not None:
-            dfs(node.right)
+        #Update the map with the cumulative sum from root to node.
+        map[current_sum] += 1
 
-        map.pop()
-        i -= 1
+        dfs(node.left, current_sum)
+        dfs(node.right, current_sum)
 
+        #Backtrack, take the cumulative sum out of the map.
+        map[current_sum] -= 1
 
-    dfs(root)
+    dfs(root, 0)
 
     return path_count
 
 if __name__ == '__main__':
     test1 = TreeNode(10)
     test1.left = TreeNode(5)
+    test1.right = TreeNode(-2)
+    test1.right.left = TreeNode(10)
+    test1.right.right = TreeNode(0)
+    test1.right.right.left = TreeNode(8)
+    test1.left.left = TreeNode(3)
+    test1.left.right = TreeNode(3)
 
     print(path_sum(test1, 8))
