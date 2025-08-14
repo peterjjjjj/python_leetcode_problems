@@ -28,7 +28,7 @@ def path_sum2(root: TreeNode, target_sum: int) -> list[list[int]]:
 
         path.pop()
 
-    dfs(root, 0)
+    dfs(root)
 
     return all_paths
 
