@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83246569-825b-4424-ad1b-379dc0d9bc14" name="Changes" comment="binary_tree_max_path_sum_4">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="83246569-825b-4424-ad1b-379dc0d9bc14" name="Changes" comment="path_sum3_1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,37 +38,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.binary_tree_max_path_sum.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.binary_tree_paths.executor&quot;: &quot;Run&quot;,
-    &quot;Python.climbing_stairs.executor&quot;: &quot;Run&quot;,
-    &quot;Python.coin_change.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.combination_sum.executor&quot;: &quot;Run&quot;,
-    &quot;Python.combination_sum_2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.diameter_binary_tree.executor&quot;: &quot;Run&quot;,
-    &quot;Python.fibonacci_number.executor&quot;: &quot;Run&quot;,
-    &quot;Python.house_robber.executor&quot;: &quot;Run&quot;,
-    &quot;Python.house_robber_2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.longest_common_subsequence.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.min_cost_climbing_stairs.executor&quot;: &quot;Run&quot;,
-    &quot;Python.min_window_substring.executor&quot;: &quot;Run&quot;,
-    &quot;Python.palindrom_partition.executor&quot;: &quot;Run&quot;,
-    &quot;Python.permutations.executor&quot;: &quot;Run&quot;,
-    &quot;Python.unique_paths.executor&quot;: &quot;Run&quot;,
-    &quot;Python.word_ladder.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/mengfeijin/Desktop/pycharm/python_algrithms&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.binary_tree_max_path_sum.executor": "Debug",
+    "Python.binary_tree_paths.executor": "Run",
+    "Python.climbing_stairs.executor": "Run",
+    "Python.coin_change.executor": "Debug",
+    "Python.combination_sum.executor": "Run",
+    "Python.combination_sum_2.executor": "Run",
+    "Python.diameter_binary_tree.executor": "Run",
+    "Python.fibonacci_number.executor": "Run",
+    "Python.house_robber.executor": "Run",
+    "Python.house_robber_2.executor": "Run",
+    "Python.longest_common_subsequence.executor": "Debug",
+    "Python.min_cost_climbing_stairs.executor": "Run",
+    "Python.min_window_substring.executor": "Run",
+    "Python.palindrom_partition.executor": "Run",
+    "Python.path_sum2.executor": "Debug",
+    "Python.path_sum_3.executor": "Debug",
+    "Python.permutations.executor": "Run",
+    "Python.unique_paths.executor": "Run",
+    "Python.word_ladder.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/mengfeijin/Desktop/pycharm/python_algrithms",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/python/easy" />
@@ -97,6 +97,7 @@
       <workItem from="1754340091165" duration="51559000" />
       <workItem from="1754948312662" duration="26189000" />
       <workItem from="1755123277363" duration="783000" />
+      <workItem from="1755196376062" duration="10564000" />
     </task>
     <task id="LOCAL-00001" summary="renamed folder and directory">
       <option name="closed" value="true" />
@@ -418,7 +419,23 @@
       <option name="project" value="LOCAL" />
       <updated>1755123283191</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="path_sum3_0">
+      <option name="closed" value="true" />
+      <created>1755202542234</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1755202542234</updated>
+    </task>
+    <task id="LOCAL-00042" summary="path_sum3_1">
+      <option name="closed" value="true" />
+      <created>1755204449878</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1755204449878</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,7 +464,9 @@
     <MESSAGE value="binary_tree_max_path_sum_2" />
     <MESSAGE value="binary_tree_max_path_sum_3" />
     <MESSAGE value="binary_tree_max_path_sum_4" />
-    <option name="LAST_COMMIT_MESSAGE" value="binary_tree_max_path_sum_4" />
+    <MESSAGE value="path_sum3_0" />
+    <MESSAGE value="path_sum3_1" />
+    <option name="LAST_COMMIT_MESSAGE" value="path_sum3_1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -487,6 +506,16 @@
           <line>45</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/python/medium/Trees/path_sum2.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/python/medium/Trees/path_sum_3.py</url>
+          <line>61</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -496,6 +525,8 @@
     <SUITE FILE_PATH="coverage/python_algrithms$binary_tree_max_path_sum.coverage" NAME="binary_tree_max_path_sum Coverage Results" MODIFIED="1755122977427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/hard/Trees" />
     <SUITE FILE_PATH="coverage/python_algrithms$combination_sum.coverage" NAME="combination_sum Coverage Results" MODIFIED="1754345219192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/medium/Recursion" />
     <SUITE FILE_PATH="coverage/python_algrithms$permutations.coverage" NAME="permutations Coverage Results" MODIFIED="1754441256097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/medium/Recursion" />
+    <SUITE FILE_PATH="coverage/python_algrithms$path_sum2.coverage" NAME="path_sum2 Coverage Results" MODIFIED="1755196845493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/medium/Trees" />
+    <SUITE FILE_PATH="coverage/python_algrithms$path_sum_3.coverage" NAME="path_sum_3 Coverage Results" MODIFIED="1755204236676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/medium/Trees" />
     <SUITE FILE_PATH="coverage/python_algrithms$word_ladder.coverage" NAME="word_ladder Coverage Results" MODIFIED="1754438085393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/hard" />
     <SUITE FILE_PATH="coverage/python_algrithms$climbing_stairs.coverage" NAME="climbing_stairs Coverage Results" MODIFIED="1754677291195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/easy/Dynamic Programming" />
     <SUITE FILE_PATH="coverage/python_algrithms$min_window_substring.coverage" NAME="min_window_substring Coverage Results" MODIFIED="1753404563574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python/hard/Sliding Window" />
