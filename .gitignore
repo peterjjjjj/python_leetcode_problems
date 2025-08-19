@@ -1,0 +1,33 @@
+# PyCharm-specific files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Python bytecode
+*.pyc
+__pycache__/
+
+# Virtual environment
+venv/
+.venv/
+env/
+.env/
+
+# Distribution / build
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# Testing
+.pytest_cache/
+.tox/
+
+# Logs and databases (example)
+*.log
+*.sqlite3
+
+# OS generated files
+.DS_Store
+Thumbs.db
