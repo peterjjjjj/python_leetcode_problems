@@ -29,5 +29,5 @@ build/
 *.sqlite3
 
 # OS generated files
-.DS_Store
+.DS_Store/
 Thumbs.db
