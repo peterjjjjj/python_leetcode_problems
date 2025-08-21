@@ -5,23 +5,20 @@ def length(nums: list[int]) -> int:
 
     max_subsequence = [nums[0]]
 
-    def binary_search(num: int) -> None:
+    def binary_search(num: int):
         left = 0
-        right = len(max_subsequence)
+        right = len(max_subsequence) - 1
 
         while left <= right:
             mid = left + (right - left) // 2
-            if num == max_subsequence[mid]:
+            if max_subsequence[mid] == num:
                 return
-            elif num < max_subsequence[mid]:
-                if num > max_subsequence[mid - 1]:
-                    max_subsequence[mid] = num
-                    return
-                else:
-                    right = mid - 1
-            else:
+            elif max_subsequence[mid] < num:
                 left = mid + 1
+            else:
+                right = mid - 1
 
+        max_subsequence[left] = num
         return
 
     for i in range(1, len(nums)):
