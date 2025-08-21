@@ -3,30 +3,35 @@ def length(nums: list[int]) -> int:
     LC 300
     """
 
-    #Initialize the dp table.
-    dp = [0 for _ in range(len(nums) + 1)]
-    #The length should be at least 1.
-    dp[1] = 1
+    max_subsequence = [nums[0]]
 
-    max_len = 1
-    previous_max = dp[1]
+    def binary_search(num: int) -> None:
+        left = 0
+        right = len(max_subsequence)
 
-    if len(nums) == 1:
-        return dp[1]
+        while left <= right:
+            mid = left + (right - left) // 2
+            if num == max_subsequence[mid]:
+                return
+            elif num < max_subsequence[mid]:
+                if num > max_subsequence[mid - 1]:
+                    max_subsequence[mid] = num
+                    return
+                else:
+                    right = mid - 1
+            else:
+                left = mid + 1
 
+        return
 
-    for i in range(2, len(nums) + 1):
-        if nums[i - 1] > nums[i - 2] and nums[i - 1] > previous_max:
-            dp[i] = dp[i - 1] + 1
-            previous_max = nums[i - 1]
-            if dp[i] > max_len:
-                max_len = dp[i]
+    for i in range(1, len(nums)):
+        if nums[i] > max_subsequence[-1]:
+            max_subsequence.append(nums[i])
 
         else:
-            dp[i] = 1
-            previous_max = nums[i - 1]
+            binary_search(nums[i])
 
-    return max_len
+    return len(max_subsequence)
 
 if __name__ == '__main__':
     test_array = [4,10,4,3,8,9]
