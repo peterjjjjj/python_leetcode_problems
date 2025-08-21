@@ -9,22 +9,25 @@ def length(nums: list[int]) -> int:
     dp[1] = 1
 
     max_len = 1
+    previous_max = dp[1]
 
     if len(nums) == 1:
         return dp[1]
 
 
     for i in range(2, len(nums) + 1):
-        if nums[i - 1] > nums[i - 2]:
+        if nums[i - 1] > nums[i - 2] and nums[i - 1] > previous_max:
             dp[i] = dp[i - 1] + 1
+            previous_max = nums[i - 1]
             if dp[i] > max_len:
                 max_len = dp[i]
 
         else:
-            dp[i] = dp[i - 1]
+            dp[i] = 1
+            previous_max = nums[i - 1]
 
     return max_len
 
 if __name__ == '__main__':
-    test_array = [0,1,0,3,2,3]
+    test_array = [4,10,4,3,8,9]
     print(length(test_array))
