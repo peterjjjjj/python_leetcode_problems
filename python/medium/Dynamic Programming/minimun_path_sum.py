@@ -18,7 +18,7 @@ def min_path_sum(grid: list[list[int]]) -> int:
     #For the rest of the metrix, the minimum path would be the min of dp from the above, j-1, i, and left, i-1,j.
     for i in range(1, len(grid)):
         for j in range(1, len(grid[0])):
-            dp[i][j] = min(dp[i - 1][j], dp[j - 1][i]) + grid[i][j]
+            dp[i][j] = min(dp[i - 1][j], dp[i][j - 1]) + grid[i][j]
 
     return dp[-1][-1]
 
@@ -27,5 +27,6 @@ def min_path_sum(grid: list[list[int]]) -> int:
 
 
 if __name__ == '__main__':
-    print(min_path_sum([[1,3,1], [1,5,1], [4,2,1]]))
+    #print(min_path_sum([[1,3,1], [1,5,1], [4,2,1]]))
     #print(min_path_sum([[1,2,3], [4,5,6]]))
+    print(min_path_sum([[1,2], [1,1]]))
