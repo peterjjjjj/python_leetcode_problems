@@ -8,6 +8,7 @@ class TreeNode:
 def kth_smallest(root: TreeNode, k: int) -> int:
     """
     LC 230.
+
     """
 
     #Use a list cuz it's mutable.
