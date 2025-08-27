@@ -5,29 +5,24 @@ def my_pow(x: float, n: int) -> float:
     if n == 0:
         return float(1)
 
-    def pow_helper_pos(result: float, power: int) -> float:
+    def pow_helper(result: float, power: int) -> float:
         if power == 0:
-            return result
+            return 1.0
 
-        result = result * x
-        power -= 1
+        if power % 2 == 0:
+            return pow_helper(result * result, power // 2)
 
-        return pow_helper_pos(result, power)
+        else:
+            return result * pow_helper(result * result, (power - 1) // 2)
 
-    def pow_helper_neg(result: float, power: int) -> float:
-        if power == 0:
-            return 1 / result
-
-        result = result * x
-        power += 1
-
-        return pow_helper_neg(result, power)
 
     if n > 0:
-        return pow_helper_pos(x, n)
+        return pow_helper(x, n)
 
-    return pow_helper_neg(x, n)
+    else:
+        return 1 / pow_helper(x, -n)
+
 
 if __name__ == '__main__':
-    print(my_pow(5.0, 2))
-    print(my_pow(5.0, -2))
+    print(my_pow(2.0, 4))
+    print(my_pow(2.0, -4))
