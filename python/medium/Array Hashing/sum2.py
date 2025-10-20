@@ -34,11 +34,11 @@ def twoSumHash(nums: list[int], target: int) -> list[int]:
     TC, SC: O(n)
     """
 
-    #The structure of the hash is reversed because we are asking for the indices, {previous num : index}.
-    hash_table = {}  # Dict cuz of time complexity.
+    #{previous num : index}.
+    hash_table = {}
 
     for i, num in enumerate(nums):
-        complement = target - nums[i]
+        complement = target - num
 
         # If num could be one of the complements.
         if complement in hash_table:
