@@ -17,3 +17,23 @@ class Solution(object):
         head.next = None
         return new_head
 
+def reserveList(head: ListNode) -> ListNode:
+    """
+
+    """
+
+    if not head.next:
+        return head
+
+    new_head = reserveList(head.next)
+    head.next.next = head
+    head.next = None
+
+    return new_head
+
+if __name__ == '__main__':
+    test_tree = ListNode(1)
+    test_tree.next = ListNode(2)
+    test_tree.next.next = ListNode(3)
+    test_tree = reserveList(test_tree)
+    print(test_tree)
