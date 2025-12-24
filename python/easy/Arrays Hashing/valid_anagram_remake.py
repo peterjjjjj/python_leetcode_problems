@@ -1,4 +1,6 @@
 #Sorting, hash, array
+from collections import Counter
+
 
 class Solution:
     def __init__(self, s: str, t: str):
