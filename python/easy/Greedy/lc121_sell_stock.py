@@ -17,19 +17,19 @@ class Solution:
         return max_profit
 
     def pointer(self) -> int:
-        min_index = 0
-        max_index = 1
+        l = 0
+        max_profit = 0
 
         for i in range(1, len(self.prices)):
-            if self.prices[i] < self.prices[min_index]:
-                min_index = i
-            elif self.prices[i] > self.prices[max_index]:
-                max_index = i
+            if self.prices[l] < self.prices[i]:
+                current_profit = self.prices[i] - self.prices[l]
+                max_profit = max(max_profit, current_profit)
+            else:
+                l = i
 
-        return self.prices[max_index] - self.prices[min_index]
-
+        return max_profit
 
 if __name__ == "__main__":
-    testcase = Solution([10, 1, 5, 2])
+    testcase = Solution([7,6,5,4,3,1])
     print(testcase.greedy())
     print(testcase.pointer())
