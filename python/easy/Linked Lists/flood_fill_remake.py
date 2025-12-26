@@ -15,25 +15,23 @@ def flood_fill_recursion(image: list[list[int]], sr: int, sc: int, color: int) -
         #Change the current num to color
         image[r][c] = color
 
-        #Search up
-        if c != 0:
-            search(r, c - 1, start_color)
-
-        #Search bottom
-        if c != len(image) - 1:
-            search(r, c + 1, start_color)
-
-        #Search left
-        if r != 0:
+        # Up
+        if r > 0:
             search(r - 1, c, start_color)
-
-        #Right
-        if r != len(image) - 1:
+        # Down
+        if r < len(image) - 1:
             search(r + 1, c, start_color)
+        # Left
+        if c > 0:
+            search(r, c - 1, start_color)
+        # Right
+        if c < len(image[0]) - 1:
+            search(r, c + 1, start_color)
 
     search(sr, sc, image[sr][sc])
     return image
 
 
 if __name__ == "__main__":
-    print(flood_fill_recursion([[1, 1, 1], [1, 1, 0], [1, 0, 1]], 1, 1, 2))
+    #print(flood_fill_recursion([[1, 1, 1], [1, 1, 0], [1, 0, 1]], 1, 1, 2))
+    print(flood_fill_recursion([[1, 1, 1], [1, 1, 1], [1, 1, 1]], 1, 0, 2))
