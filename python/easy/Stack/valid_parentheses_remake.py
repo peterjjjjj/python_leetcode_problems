@@ -1,4 +1,6 @@
 def valid_parentheses(s: str) -> bool:
+    if len(s) == 0:
+        return True
     stack = []
     pair = {'(' : ')', '[' : ']', '{' : '}'}
 
@@ -6,6 +8,8 @@ def valid_parentheses(s: str) -> bool:
         if char in ['(', '[', '{']:
             stack.append(char)
         elif char in [')', ']', '}']:
+            if not stack:
+                return False
             if char != pair[stack.pop()]:
                 return False
 
