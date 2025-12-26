@@ -20,14 +20,12 @@ class Solution:
         return self.nums
 
     def one_pass(self) -> list[int]:
-        zero_positions = []
+        slow_pointer = 0
 
-        for i in range(len(self.nums)):
-            if self.nums[i] == 0:
-                zero_positions.append(i)
-            elif zero_positions:
-                self.nums[zero_positions.pop()] = self.nums[i]
-                zero_positions.append(i)
+        for fast_pointer in range(len(self.nums)):
+            if self.nums[fast_pointer] != 0:
+                self.nums[slow_pointer], self.nums[fast_pointer] = self.nums[fast_pointer], self.nums[slow_pointer]
+                slow_pointer += 1
 
         return self.nums
 
@@ -35,4 +33,5 @@ class Solution:
 if __name__ == "__main__":
     testcase = Solution([0,1,0,3,12])
     print(testcase.two_passes())
-    print(testcase.one_pass())
+    testcase2 = Solution([0,1,0,3,12])
+    print(testcase2.one_pass())
