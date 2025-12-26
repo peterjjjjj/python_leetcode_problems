@@ -1,4 +1,6 @@
 def assign_cookies(g: list[int], s: list[int]) -> int:
+    g.sort()
+    s.sort()
     count = 0
     i, j = 0, 0
 
@@ -13,4 +15,4 @@ def assign_cookies(g: list[int], s: list[int]) -> int:
 
 
 if __name__ == "__main__":
-    print(assign_cookies([1, 2, 3, 4, 5], [1, 2, 3]))
+    print(assign_cookies([10,9,8,7], [5,6,7,8]))
