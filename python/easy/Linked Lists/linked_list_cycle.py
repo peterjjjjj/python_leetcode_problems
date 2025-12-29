@@ -3,43 +3,33 @@ class ListNode:
         self.val = x
         self.next = None
 
-def has_cycle(head):
-    """
-    time complexity: O(n)
-    space complexity: O(n)
+#2 solutions, hash, two pointer
 
-    :param head:
-    :return:
-    """
-    passed_nodes = set()
-    #set current to the starting node
+def hashset(head: ListNode) -> bool:
+    seen = set()
+    #Set curr to first node
     current = head
 
-    while current is not None:
-        if current in passed_nodes:
+    while current:
+        #Cycle found
+        if current in seen:
             return True
-        passed_nodes.add(current)
+
+        seen.add(current)
         current = current.next
+
     return False
 
-def has_cycle_fast_slow(head):
-    """
-    time complexity: O(n)
-    space complexity: O(1)
+def two_pointer(head: ListNode) -> bool:
+    #The idea is that fast moves 2 nodes a time,
+    #as slow loops through first cycle fast finishes 2 and they overlap
+    slow = fast = head
 
-    :param head:
-    :return:
-    """
-    if not head:
-        return False
-    slow_pointer = head
-    fast_pointer = head.next
+    while fast and fast.next:
+        fast = fast.next.next
+        slow = slow.next
 
-    while fast_pointer is not None and fast_pointer.next is not None:
-        if slow_pointer == fast_pointer:
-            #they meet up, means that it is a circle
+        if fast == slow:
             return True
-        #movee slow pointer up by 1, fast by 2
-        slow_pointer = slow_pointer.next
-        fast_pointer = fast_pointer.next.next
+
     return False
