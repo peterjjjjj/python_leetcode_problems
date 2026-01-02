@@ -1,5 +1,4 @@
-#DFS, recursion
-from unittest import TestCase
+#Recursion DFS, BFS, iterative DFS
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -7,38 +6,22 @@ class TreeNode:
         self.left = left
         self.right = right
 
-def DFS(root: TreeNode) -> list[str]:
-    paths = []
+def recursive_DFS(root: TreeNode) -> int:
 
-    def helper(node: TreeNode, curr_path: list[int]) -> None:
-        nonlocal paths
-
-        #Basecase
+    def helper(node: TreeNode, depth: int) -> int:
         if not node:
-            return
+            return depth
 
-        curr_path.append(node.val)
+        left = helper(node.left, depth + 1)
+        right = helper(node.right, depth + 1)
+        return max(left, right)
 
-        #Leaf found
-        if not node.left and not node.right:
-            paths.append(list(curr_path))
-            curr_path.pop()
-            return
-
-        helper(node.left, curr_path)
-        helper(node.right, curr_path)
-        curr_path.pop()
-
-    helper(root, [])
-    return paths
-
+    return helper(root, 0)
 
 if __name__ == "__main__":
-    testcase = TreeNode(1)
-    testcase.left = TreeNode(2)
-    testcase.right = TreeNode(3)
-    testcase.left.right = TreeNode(5)
-    print(DFS(testcase))
-
-
-
+    testcase = TreeNode(3)
+    testcase.left = TreeNode(9)
+    testcase.right = TreeNode(20)
+    testcase.right.left = TreeNode(15)
+    testcase.right.right = TreeNode(7)
+    print(recursive_DFS(testcase))
