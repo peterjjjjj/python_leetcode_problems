@@ -25,11 +25,10 @@ def three_pointer(nums: list[int]) -> list[list[int]]:
                 left += 1
                 right -= 1
 
-                while left < right:
-                    if nums[left] == nums[left + 1]:
-                        left += 1
-                    if nums[right] == nums[right - 1]:
-                        right -= 1
+                while left < right and nums[left] == nums[left - 1]:
+                    left += 1
+                while left < right and nums[right] == nums[right + 1]:
+                    right -= 1
 
             #Move left
             elif current_sum < 0:
@@ -43,4 +42,5 @@ def three_pointer(nums: list[int]) -> list[list[int]]:
 
 
 if __name__ == '__main__':
-    print(three_pointer([-1,0,1,2,-1,-4]))
+    #print(three_pointer([-1,0,1,2,-1,-4]))
+    print(three_pointer([2,-3,0,-2,-5,-5,-4,1,2,-2,2,0,2,-4,5,5,-10]))
