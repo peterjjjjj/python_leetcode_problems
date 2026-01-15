@@ -13,7 +13,7 @@ def pointer(nums: list[int], target: int) -> list[list[int]]:
             if j > (i + 1) and nums[j] == nums[j - 1]:
                 continue
 
-            left, right = i + 1, len(nums) - 1
+            left, right = j + 1, len(nums) - 1
 
             while left < right:
                 current_sum = nums[i] + nums[j] + nums[left] + nums[right]
@@ -30,7 +30,7 @@ def pointer(nums: list[int], target: int) -> list[list[int]]:
                     while left < right and nums[right] == nums[right + 1]:
                         right -= 1
 
-                elif current_sum < 0:
+                elif current_sum < target:
                     left += 1
 
                 else:
@@ -39,4 +39,4 @@ def pointer(nums: list[int], target: int) -> list[list[int]]:
     return results
 
 if __name__ == '__main__':
-    print(pointer([2,2,2,2,2,2], 8))
+    print(pointer([-3,-1,0,2,4,5], 2))
