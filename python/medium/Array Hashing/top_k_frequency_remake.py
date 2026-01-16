@@ -1,4 +1,6 @@
 #3 solutions, sorting, heap, bucket
+import collections, heapq
+
 
 def sorting(nums: list[int], k: int) -> list[int]:
     frequency_map = {}
@@ -17,5 +19,19 @@ def sorting(nums: list[int], k: int) -> list[int]:
 
     return result
 
+
+def heap(nums: list[int], k: int) -> list[int]:
+    """
+    Heap is a tree structure, accessing smallest : O(1), Insert O(log K(K is the height of the tree)), space: O(K)
+    """
+
+    counts = collections.Counter(nums)
+
+    results = heapq.nlargest(k, counts.keys(), key=lambda x: counts[x])
+
+    return results
+
+
 if __name__ == '__main__':
     print(sorting([1,1,1,2,2,0,0,0,0,0,3], 2))
+    print(heap([1,1,1,2,2,0,0,0,0,0,0,4], 2))
