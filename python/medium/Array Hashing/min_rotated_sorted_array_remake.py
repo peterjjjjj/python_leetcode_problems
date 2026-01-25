@@ -32,6 +32,25 @@ def binary_search_recursion(nums: list[int]) -> int:
 
     return helper(0, len(nums) - 1)
 
+def practice_recursion(nums: list[int]) -> int:
+    left, right = 0, len(nums) - 1
+
+    def helper(low: int, high: int) -> int:
+        if low == high:
+            return nums[low]
+
+        mid = (low + high) // 2
+
+        if nums[mid] > nums[high]:
+            return helper(mid + 1, high)
+
+        elif nums[mid] < nums[high]:
+            return helper(low, mid)
+
+    return helper(left, right)
+
+
 if __name__ == '__main__':
     print(binary_search([3,4,0,1,2]))
     print(binary_search_recursion([3,4,0,1,2]))
+    print(practice_recursion([3,4,5,0,1,2]))
