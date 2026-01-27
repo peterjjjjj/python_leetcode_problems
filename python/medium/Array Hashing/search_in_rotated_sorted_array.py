@@ -43,13 +43,13 @@ def practice(nums: list[int], target: int) -> int:
         if nums[mid] >= nums[left]:
             #And target is in this part
             if nums[mid] >= target >= nums[left]:
-                right = mid #Ask Gemini why this works
+                right = mid - 1 #Since  if nums[mid] == target: already checks for the mid, but right = mid, works too
             else:
                 left = mid + 1
 
         elif nums[mid] < nums[right]:
             if nums[mid] <= target <= nums[right]:
-                left = mid
+                left = mid - 1
             else:
                 right = mid - 1
 
